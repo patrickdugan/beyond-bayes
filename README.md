@@ -275,3 +275,25 @@ logging do not repair model misspecification or common-cause dependence.
 The quorum construction and Merkle trees are standard ideas. ACE's proposed
 contribution is their compositional use as a verifiable inference and
 authorization contract, tested against a strong set of probabilistic baselines.
+
+
+## ACE v0.7: witnessed clustered certificates (draft PR)
+
+`clustered_certificate.py` binds the signed v0.5 checkpoint log to the v0.6
+cluster plan and a structured action intent through separately pinned v2
+commitments. `independent_cluster_verifier.py` recomputes cluster membership,
+erasures, contradictions and finite-state conditional e-scores without calling
+the production scorer. `clustered_action_gate.py` persists single-use action
+nonces and log heads; `verify_clustered.py` is the strict v2 CLI.
+
+```sh
+python -m unittest discover -q
+python demo_clustered.py --output /tmp/v07-cert.json --pins /tmp/v07-pins.json
+```
+
+Use the exact required external pins printed to `/tmp/v07-pins.json` in the
+`verify_clustered.py --expected-*` arguments. The demo uses deterministic
+synthetic test keys. `RESEARCH_V07.md` describes the theorem assumptions,
+`RESULTS_V07.md` records the test coverage, and `HANDOFF_V07.md` covers the
+remaining policy-endorsement and antirollback work. Existing v1 witnessed
+certificates are invalid under the v2 verifier.

@@ -1,0 +1,10 @@
+{
+  "expected_action": "0f2735f78bd2e8e952a4b590f711a53273478cfb1019b0d1f76f826386b6ac9e",
+  "expected_challenge": "8c7b7b5f1f44d9e32e493f85a6a5fddb",
+  "expected_cluster_plan": "91aa777b730e7ab7dcd22cb98d7aa1e203aa22cce7588fd49456e745d2385012",
+  "expected_epoch": 0,
+  "expected_policy": "313640a768e64959de8ce0bb86c90566561d7267053fa2230f5dc525926ef15c",
+  "expected_previous_digest": "0000000000000000000000000000000000000000000000000000000000000000",
+  "expected_protocol": "0e0f0962d842116796eb4afeaefeb0b77367a109cccb18ebe919f0b755cb4777",
+  "expected_v2_policy": "c5468a2b7827809d0e71bfc6c44204f92c3547a9bbc1c633319c7b0e8f194124"
+}
