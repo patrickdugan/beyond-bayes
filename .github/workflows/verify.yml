@@ -17,6 +17,7 @@ jobs:
           python-version: '3.13'
       - run: python -m pip install -r requirements.txt
       - run: python -m unittest discover -v
+      - run: python benchmark_clusters.py --trials-per-truth 100 --output /tmp/ace-clusters-smoke
       - run: python exact_source_benchmark.py --output /tmp/ace-exact
       - run: python quorum_audit.py --output /tmp/ace-quorum.json
       - run: python demo_witnessed.py --output /tmp/ace-witness.json

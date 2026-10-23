@@ -1,5 +1,36 @@
 # Beyond Bayes: Adversarial Constraint Epistemics (ACE)
 
+## v0.6: conditional evidence and dependent-source clusters
+
+**Status: research prototype, 23 October 2026.** The new signed-input inference layer
+uses a separately pinned, exact-cover statistical cluster plan (`clustered.py`)
+and a finite-state conditional-null e-process (`conditional.py`). Corrupted and
+erased cluster readings are scored by a lower-envelope dynamic program that
+reconstructs each candidate *clean* history before evaluating predictable bets.
+It gives an anytime false-authorization guarantee **conditional on** verified
+cluster assignments, the model's full-history conditional-probability bounds,
+and the precommitted number of corrupted clusters.
+
+```sh
+python -m pip install -r requirements.txt
+python -m unittest discover -q
+python benchmark_clusters.py --trials-per-truth 4000 --seed 82064 \
+  --output results/v06_clustered_benchmark
+```
+
+The baseline includes a policy-matched robust Bayesian posterior under exact
+IID null and an interval-valued rectangular credal-Bayes comparator. The
+policy-matched robust Bayes makes exactly the same decisions as ACE under its
+matched IID assumptions. Details: [research note](RESEARCH_V06.md),
+[reproducible results](RESULTS_V06.md), and [handoff](HANDOFF_V06.md).
+
+**Certificate boundary:** v0.6 cluster decisions are standalone; existing
+v0.5 witnessed authorization certificates only attest to the prior v0.5
+statistical model. Signed source reports authenticate enrolled keys, not
+physical independence. Do not deploy this prototype for real asset custody.
+
+## Previous v0.5 implementation and historical results
+
 **v0.5 research prototype | October 23, 2026**
 
 ACE is an experiment in authorization decisions backed by explicitly enrolled
