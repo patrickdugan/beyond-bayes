@@ -26,7 +26,7 @@ theorem reserve_is_monotone (ledger next : Ledger) (a : Nat)
   by_cases bound : 0 < a ∧ ledger.spent + a ≤ ledger.cap
   · simp only [reserve, if_pos bound, Option.some.injEq] at h
     cases h
-    omega
+    simp
   · simp [reserve, bound] at h
 
 theorem reserve_preserves_cap (ledger next : Ledger) (a : Nat)
