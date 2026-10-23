@@ -28,7 +28,7 @@ theorem rollover_monotone (s next : Root) (used fresh : Nat)
   by_cases permitted : s.lifetimeSpent + used + fresh ≤ s.cap
   · simp only [rollover, if_pos permitted, Option.some.injEq] at h
     cases h
-    omega
+    simp
   · simp [rollover, permitted] at h
 
 theorem rollover_budget_cap (s next : Root) (used fresh : Nat)
