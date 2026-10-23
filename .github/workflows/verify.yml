@@ -35,6 +35,18 @@ jobs:
             --expected-challenge 8c7b7b5f1f44d9e32e493f85a6a5fddb \
             --expected-epoch 0 \
             --expected-previous-digest 0000000000000000000000000000000000000000000000000000000000000000
+      - name: Replay pinned synthetic v2 clustered authorization
+        run: |
+          python demo_clustered.py --output /tmp/ace-clustered.json --pins /tmp/ace-pins.json
+          python - <<'PYCLI'
+          import json,subprocess,sys
+          pins=json.load(open('/tmp/ace-pins.json'))
+          args=[sys.executable,'verify_clustered.py','/tmp/ace-clustered.json']
+          for key,value in pins.items():
+              args.extend(('--'+key.replace('_','-'),str(value)))
+          result=subprocess.run(args,check=True,capture_output=True,text=True)
+          assert json.loads(result.stdout)['authorized']
+          PYCLI
       - run: python adversarial_benchmark.py --trials-per-truth 50 --output /tmp/ace-smoke
       - run: python demo_anchor.py --output /tmp/ace-anchor.json
       - name: Replay pinned synthetic anchor certificate

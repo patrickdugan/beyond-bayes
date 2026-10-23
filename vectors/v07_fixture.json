@@ -1,0 +1,338 @@
+{
+  "action_intent": {
+    "challenge": "8c7b7b5f1f44d9e32e493f85a6a5fddb",
+    "operation": "release-fixture",
+    "parameters": {
+      "chain": "regtest",
+      "units": 1
+    },
+    "resource": "synthetic-wallet",
+    "schema": "ACE-action-intent-v2"
+  },
+  "authorization_policy_commitment": "c5468a2b7827809d0e71bfc6c44204f92c3547a9bbc1c633319c7b0e8f194124",
+  "authorization_policy_v2": {
+    "action_commitment": "0f2735f78bd2e8e952a4b590f711a53273478cfb1019b0d1f76f826386b6ac9e",
+    "cluster_plan_commitment": "91aa777b730e7ab7dcd22cb98d7aa1e203aa22cce7588fd49456e745d2385012",
+    "protocol_commitment": "0e0f0962d842116796eb4afeaefeb0b77367a109cccb18ebe919f0b755cb4777",
+    "schema": "ACE-clustered-authorization-policy-v2",
+    "witnessed_policy_commitment": "313640a768e64959de8ce0bb86c90566561d7267053fa2230f5dc525926ef15c"
+  },
+  "claimed_decision_v2": {
+    "admitted_clusters": 6,
+    "authorized": true,
+    "cluster_bits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "conflicting_clusters": [],
+    "equivocated_slots": [],
+    "missing_clusters": 0,
+    "quarantined_reports": 0,
+    "robust_max_log_e": 8.317766166719345
+  },
+  "cluster_plan": {
+    "alpha": 0.05,
+    "clusters": [
+      {
+        "cluster_id": "cluster-0",
+        "slot_ids": [
+          "unit-0",
+          "unit-1"
+        ]
+      },
+      {
+        "cluster_id": "cluster-1",
+        "slot_ids": [
+          "unit-2",
+          "unit-3"
+        ]
+      },
+      {
+        "cluster_id": "cluster-2",
+        "slot_ids": [
+          "unit-4",
+          "unit-5"
+        ]
+      },
+      {
+        "cluster_id": "cluster-3",
+        "slot_ids": [
+          "unit-6",
+          "unit-7"
+        ]
+      },
+      {
+        "cluster_id": "cluster-4",
+        "slot_ids": [
+          "unit-8",
+          "unit-9"
+        ]
+      },
+      {
+        "cluster_id": "cluster-5",
+        "slot_ids": [
+          "unit-10",
+          "unit-11"
+        ]
+      }
+    ],
+    "conditional_null": {
+      "initial_state": "iid",
+      "rows": [
+        {
+          "after_one": "iid",
+          "after_zero": "iid",
+          "bet_q": 0.2,
+          "high": 0.8,
+          "low": 0.8,
+          "state": "iid"
+        }
+      ],
+      "version": 1
+    },
+    "corruption_budget_clusters": 0,
+    "protocol_commitment": "0e0f0962d842116796eb4afeaefeb0b77367a109cccb18ebe919f0b755cb4777",
+    "version": 2
+  },
+  "schema": "ACE-witnessed-clustered-certificate-v2",
+  "witnessed_log_v1": {
+    "claimed_decision": {
+      "accepted_slots": 12,
+      "authorized": true,
+      "equivocations": [],
+      "missing_slots": 0,
+      "robust_max_log_e": 16.63553233343869
+    },
+    "complete_log": [
+      {
+        "bit": 0,
+        "experiment_id": "experiment-2026-10-23",
+        "protocol_commitment": "0e0f0962d842116796eb4afeaefeb0b77367a109cccb18ebe919f0b755cb4777",
+        "signature_hex": "5a07757b5a230272802ff2ad8712d61f783cea802531101cd1ce19510eabf78eaf1f14cf492ca9eaa7d64e022c21f0363f5846c68c3ecd19c4addfe8dc9d4402",
+        "slot_id": "unit-0"
+      },
+      {
+        "bit": 0,
+        "experiment_id": "experiment-2026-10-23",
+        "protocol_commitment": "0e0f0962d842116796eb4afeaefeb0b77367a109cccb18ebe919f0b755cb4777",
+        "signature_hex": "281b9db192d5791b80abc7bb27eda1455fef354ec3d4de68f0e42ddbf57712846a42c48323b36ef8a1d47295e895bd654af7a208cf9fb9988d5e84ccd1c80f0f",
+        "slot_id": "unit-1"
+      },
+      {
+        "bit": 0,
+        "experiment_id": "experiment-2026-10-23",
+        "protocol_commitment": "0e0f0962d842116796eb4afeaefeb0b77367a109cccb18ebe919f0b755cb4777",
+        "signature_hex": "8fc8fd0ebe09eeca2b5af8b5d429b0e899f4041b28729605d02b9b101795ace6be5ab11ff3f7bb9a97e3ffee3991c64b419e9dc1e32196027908815e98baca00",
+        "slot_id": "unit-2"
+      },
+      {
+        "bit": 0,
+        "experiment_id": "experiment-2026-10-23",
+        "protocol_commitment": "0e0f0962d842116796eb4afeaefeb0b77367a109cccb18ebe919f0b755cb4777",
+        "signature_hex": "34c2f13d04be666ac0ccbd0b285aab44977962a9c0bb38cdc03173a9a82e10e8c7086d0d3078505c1c7f24173d90fd6bca013cbf4300d8ecde412738e3d12403",
+        "slot_id": "unit-3"
+      },
+      {
+        "bit": 0,
+        "experiment_id": "experiment-2026-10-23",
+        "protocol_commitment": "0e0f0962d842116796eb4afeaefeb0b77367a109cccb18ebe919f0b755cb4777",
+        "signature_hex": "3f3f4d70df0cdd6aba347a7d29a7209cf7aee17e7a9a178544e93afd80fca7d8f5af46315d5cf4d30a8dcc7422fd418a135d0a6e0c2978cd6e3c5f281a9cdb07",
+        "slot_id": "unit-4"
+      },
+      {
+        "bit": 0,
+        "experiment_id": "experiment-2026-10-23",
+        "protocol_commitment": "0e0f0962d842116796eb4afeaefeb0b77367a109cccb18ebe919f0b755cb4777",
+        "signature_hex": "68e9bf615d8d163acad8550dce91961a366a16c4629e27596c2fe41058f6edb9dd037cce1007c1a74c526dc87a8420c8c5ffbe8cc15f6499dd58e29925c05c0f",
+        "slot_id": "unit-5"
+      },
+      {
+        "bit": 0,
+        "experiment_id": "experiment-2026-10-23",
+        "protocol_commitment": "0e0f0962d842116796eb4afeaefeb0b77367a109cccb18ebe919f0b755cb4777",
+        "signature_hex": "bdef09902988ca81f11b0d66c9c2af8b8519ba8bf4ece5afba5873bd7ce0076fe3f9d62f47689da06858b3d0f27a148d867725a3e542a1c7976ce5ce9fc42a0a",
+        "slot_id": "unit-6"
+      },
+      {
+        "bit": 0,
+        "experiment_id": "experiment-2026-10-23",
+        "protocol_commitment": "0e0f0962d842116796eb4afeaefeb0b77367a109cccb18ebe919f0b755cb4777",
+        "signature_hex": "8cd3f52736251175ce02f78baa6897428fa68a26b10648a3747461863961ce76f2a7bdbd0c98351d94bc60611c5d27d5674bc06caff42dc6446f203d352eb60f",
+        "slot_id": "unit-7"
+      },
+      {
+        "bit": 0,
+        "experiment_id": "experiment-2026-10-23",
+        "protocol_commitment": "0e0f0962d842116796eb4afeaefeb0b77367a109cccb18ebe919f0b755cb4777",
+        "signature_hex": "95c41e94da705221d151e8daacbc7d4ea78a245adfb04ea2f323ca69d7f9587da84298513e66a3ee30e150b22145e2f5ba71eb00c221a7561cd054d3f9977508",
+        "slot_id": "unit-8"
+      },
+      {
+        "bit": 0,
+        "experiment_id": "experiment-2026-10-23",
+        "protocol_commitment": "0e0f0962d842116796eb4afeaefeb0b77367a109cccb18ebe919f0b755cb4777",
+        "signature_hex": "c187e42d1b6f63bfb4ee4134c528e5cd6d7b7767270f86a9e461ed5b053c3d7b0fdd1367f45b494b2e9fb62087c6fefe097c9e936f365406e4ec0f039e12a003",
+        "slot_id": "unit-9"
+      },
+      {
+        "bit": 0,
+        "experiment_id": "experiment-2026-10-23",
+        "protocol_commitment": "0e0f0962d842116796eb4afeaefeb0b77367a109cccb18ebe919f0b755cb4777",
+        "signature_hex": "5928cb63a77749ea6b0f2ef403cb24b6c92b898573c83a594f71fa9b0b9a2276e594b69112969347a87817acd1b857cd48658b7d117fba5de46bb74c86745902",
+        "slot_id": "unit-10"
+      },
+      {
+        "bit": 0,
+        "experiment_id": "experiment-2026-10-23",
+        "protocol_commitment": "0e0f0962d842116796eb4afeaefeb0b77367a109cccb18ebe919f0b755cb4777",
+        "signature_hex": "4d7a5c77ee00735d78c9849fcafc1211be65c7c08f768b9b01d96010e04393fbc92ba8f43b7c5369d2230cb210f8723da2f58affd2573c5101e9b0c62b68720f",
+        "slot_id": "unit-11"
+      }
+    ],
+    "consistency_path": [],
+    "endorsements": [
+      {
+        "head_digest": "656a0a186b5c2d2e11626b8e5b6bcddd68272ca770b59e1ac354932f3a68dabf",
+        "signature_hex": "52ac22d7182daf9cbc65ded08dad018b2bacb8d2d437ac5f11958def026832259e125b48a3bdc2dcd7fa1f7855236cdcdef0866e7403175ffeebab0054b43f09",
+        "witness_id": "notary-0"
+      },
+      {
+        "head_digest": "656a0a186b5c2d2e11626b8e5b6bcddd68272ca770b59e1ac354932f3a68dabf",
+        "signature_hex": "6aaf2585bb7a370c0bfe4d74d2fc0ddd43a0e56727078f98699cb28efc44f2f215a51c4b8f4c77c685436defcc7b0cd6c32ce7908212dbe3aa184a8aea075205",
+        "witness_id": "notary-1"
+      },
+      {
+        "head_digest": "656a0a186b5c2d2e11626b8e5b6bcddd68272ca770b59e1ac354932f3a68dabf",
+        "signature_hex": "70bab801841428fe596d3503ee18c82d2b1528acc1204668dbd72ef169311fe4adfd2513d703b4133e8bc36be34e42f6031e085ef9ab707dadfd70a9465bc80a",
+        "witness_id": "notary-2"
+      }
+    ],
+    "previous_head": null,
+    "protocol": {
+      "alpha": 0.05,
+      "bet_q": 0.2,
+      "challenge": "8c7b7b5f1f44d9e32e493f85a6a5fddb",
+      "corruption_budget": 0,
+      "experiment_id": "experiment-2026-10-23",
+      "null_p": 0.8,
+      "slots": [
+        {
+          "dependence_domain": "domain-0",
+          "public_key_hex": "2a300f3b327692698eab6aa0d13165f5a49037d210f5fcf89957bbe8db287956",
+          "slot_id": "unit-0",
+          "source_id": "source-0"
+        },
+        {
+          "dependence_domain": "domain-1",
+          "public_key_hex": "540c7dc4cbb98183981999ccbca1228240482a7590dc20641112bed4ef25e301",
+          "slot_id": "unit-1",
+          "source_id": "source-1"
+        },
+        {
+          "dependence_domain": "domain-2",
+          "public_key_hex": "7434d17df0ce53840c7427b6a64066b24df7d8a76bff2cef1a37b3b1c6c4de06",
+          "slot_id": "unit-2",
+          "source_id": "source-2"
+        },
+        {
+          "dependence_domain": "domain-3",
+          "public_key_hex": "52517e76ce94c07ab76b3bfba95e613ba1e7a03885bee2875748d3f1527e6de2",
+          "slot_id": "unit-3",
+          "source_id": "source-3"
+        },
+        {
+          "dependence_domain": "domain-4",
+          "public_key_hex": "e0077095af9e5975b2b5f982c229f4b79289108acd877df40ea394943bf4d825",
+          "slot_id": "unit-4",
+          "source_id": "source-4"
+        },
+        {
+          "dependence_domain": "domain-5",
+          "public_key_hex": "bf431725c6697beea55036800f440c4d5029eacaf12af2b324ce9e603c901fec",
+          "slot_id": "unit-5",
+          "source_id": "source-5"
+        },
+        {
+          "dependence_domain": "domain-6",
+          "public_key_hex": "e44aeb35dc76287b2b9e1a5dc0b39e7cf280ba09f2c1321502b6264ff05d8236",
+          "slot_id": "unit-6",
+          "source_id": "source-6"
+        },
+        {
+          "dependence_domain": "domain-7",
+          "public_key_hex": "09b92b056a482d089bd92daabd3a0a156a88964d9f63e1587f327292f944ff42",
+          "slot_id": "unit-7",
+          "source_id": "source-7"
+        },
+        {
+          "dependence_domain": "domain-8",
+          "public_key_hex": "4243a6b947bb851c29fe2ea46a18101dc0fb7fc4d079e1939c5d447050ae6399",
+          "slot_id": "unit-8",
+          "source_id": "source-8"
+        },
+        {
+          "dependence_domain": "domain-9",
+          "public_key_hex": "dfe3b45f5106fc444495a1b3084cd465c4775a502693115f2b1977411b4be5cb",
+          "slot_id": "unit-9",
+          "source_id": "source-9"
+        },
+        {
+          "dependence_domain": "domain-10",
+          "public_key_hex": "a5466f3b021ec755b9aceb2de731e33bc765cfa2faf5ff44e0d8d0f0c8363ba5",
+          "slot_id": "unit-10",
+          "source_id": "source-10"
+        },
+        {
+          "dependence_domain": "domain-11",
+          "public_key_hex": "0fe7ea504ece8f7358e5e9ae8e32ba34ff1f5583ce176f314d1f016a2ee5c686",
+          "slot_id": "unit-11",
+          "source_id": "source-11"
+        }
+      ],
+      "version": 1
+    },
+    "schema": "ACE-witnessed-certificate-v1",
+    "signed_head": {
+      "head": {
+        "domain": "ACE:head:v1",
+        "epoch": 0,
+        "policy_commitment": "313640a768e64959de8ce0bb86c90566561d7267053fa2230f5dc525926ef15c",
+        "previous_digest": "0000000000000000000000000000000000000000000000000000000000000000",
+        "protocol_commitment": "0e0f0962d842116796eb4afeaefeb0b77367a109cccb18ebe919f0b755cb4777",
+        "root_hex": "d39297b326f5075a7909396358775983b5bf6c9dae6fc86a6f5ebea32eb4bd07",
+        "size": 12
+      },
+      "log_signature_hex": "fbfbcd0885abbbfaea4ca2785684d239f15723413e81d32a7854ae61c33dfee77e6aa7c10e6046cfbe4ce30f0ecbbc482e71aa5a9cbcefe48610549510ec1e02"
+    },
+    "witness_policy": {
+      "checkpoint_quorum": 3,
+      "log_public_key_hex": "8f07e97e1a787aace222897da784c65bc8aeeb00bdeabe553b1399e11721aaac",
+      "max_faulty": 1,
+      "protocol_commitment": "0e0f0962d842116796eb4afeaefeb0b77367a109cccb18ebe919f0b755cb4777",
+      "receipt_quorum": 3,
+      "schema": "ACE-witness-policy-v1",
+      "witnesses": [
+        {
+          "public_key_hex": "50378a47da4374a275453e1c6cfbf9816a6a196b18f3809ffe0ee5a2b2375a5b",
+          "witness_id": "notary-0"
+        },
+        {
+          "public_key_hex": "85447b85dcbf6a1089369e8fc67d893ac97ec62e6d047868dd1f3de56a497e35",
+          "witness_id": "notary-1"
+        },
+        {
+          "public_key_hex": "f8d1ceda67d4d6808ecf04ab54760e7cf43bd5dfe1efc72c0f7c74cf9f88a140",
+          "witness_id": "notary-2"
+        },
+        {
+          "public_key_hex": "39cc2bec57562b8e5126a453783f9ac99051d71ac92a28da470e9ea5a2f65dcb",
+          "witness_id": "notary-3"
+        }
+      ]
+    }
+  }
+}
