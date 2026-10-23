@@ -1,0 +1,52 @@
+name: ACE research checks
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  python:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: python -m pip install -r requirements.txt
+      - run: python -m unittest discover -v
+      - run: python exact_source_benchmark.py --output /tmp/ace-exact
+      - run: python quorum_audit.py --output /tmp/ace-quorum.json
+      - run: python demo_witnessed.py --output /tmp/ace-witness.json
+      - name: Replay witnessed certificate against pinned demo values
+        run: |
+          python verify_witnessed.py /tmp/ace-witness.json \
+            --expected-protocol 0e0f0962d842116796eb4afeaefeb0b77367a109cccb18ebe919f0b755cb4777 \
+            --expected-policy 313640a768e64959de8ce0bb86c90566561d7267053fa2230f5dc525926ef15c \
+            --expected-challenge 8c7b7b5f1f44d9e32e493f85a6a5fddb \
+            --expected-epoch 0 \
+            --expected-previous-digest 0000000000000000000000000000000000000000000000000000000000000000
+      - run: python adversarial_benchmark.py --trials-per-truth 50 --output /tmp/ace-smoke
+  lean:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: leanprover/lean-action@v1
+        with:
+          auto-config: 'false'
+          build: 'false'
+          test: 'false'
+          use-mathlib-cache: 'false'
+      - name: Kernel check ACE theorems
+        run: |
+          for file in lean/ACE/*.lean; do
+            lean "$file"
+          done
+      - name: Reject sorry and unsafe proof placeholders
+        run: |
+          if grep -nE '\b(sorry|axiom|unsafe)\b' lean/ACE/*.lean | grep -v '^$'; then
+            echo 'Inspect proof file for unproved assumptions or unsafe declarations.'
+            exit 1
+          fi
