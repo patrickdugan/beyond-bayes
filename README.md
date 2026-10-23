@@ -297,3 +297,16 @@ synthetic test keys. `RESEARCH_V07.md` describes the theorem assumptions,
 `RESULTS_V07.md` records the test coverage, and `HANDOFF_V07.md` covers the
 remaining policy-endorsement and antirollback work. Existing v1 witnessed
 certificates are invalid under the v2 verifier.
+
+## ACE v0.8: global risk budget for repeated authorizations
+
+The campaign ledger extends the per-experiment ACE guarantee to repeated adaptive attempts. Each challenge reserves integer alpha units **before** new reports, finalizes one v2 log/certificate, and obtains at most one quorum-signed authorization consumption. Denials and crashes do not return alpha. The fixed campaign scope, exact alpha and cumulative spend are embedded inside the v2 action commitment and its associated signed campaign record.
+
+```bash
+python -m unittest test_campaign test_campaign_cli test_campaign_state -v
+python demo_campaign.py --output /tmp/ace-campaign.json --pins /tmp/ace-campaign-pins.json
+python verify_campaign.py /tmp/ace-campaign.json --pins /tmp/ace-campaign-pins.json
+python benchmark_campaign.py --trials 200000 --seed 8208 --output results/v08_campaign_benchmark.json
+```
+
+The conditional risk argument and known deployment limitations are in [RESEARCH_V08.md](RESEARCH_V08.md); the attack tests in [RESULTS_V08.md](RESULTS_V08.md) and the engineering follow-up in [HANDOFF_V08.md](HANDOFF_V08.md). The 4-replica anchor service is a local fault-injection simulation. No real-asset permission is implied by passing tests.

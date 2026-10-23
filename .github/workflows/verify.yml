@@ -55,6 +55,12 @@ jobs:
             --expected-policy bd9629f168a71ef6eec8e64c828bc186dbf6324de3b1f86d26bb8fe2ea1c7c85 \
             --expected-witness-id notary-0 --expected-sequence 1 \
             --expected-previous-digest 758e88c8dfddfbd7b1a6ceb453a9de211cabfa1b0f0bfa504e88738801489b03
+      - name: Replay pinned v0.8 campaign consumption certificate
+        run: |
+          python demo_campaign.py --output /tmp/ace-campaign.json --pins /tmp/ace-campaign-pins.json
+          python verify_campaign.py /tmp/ace-campaign.json --pins /tmp/ace-campaign-pins.json
+      - name: Smoke-test campaign-wide alpha spending benchmark
+        run: python benchmark_campaign.py --trials 2000 --seed 8208 --output /tmp/ace-campaign-benchmark.json
   lean:
     runs-on: ubuntu-latest
     steps:
