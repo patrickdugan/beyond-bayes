@@ -1,4 +1,4 @@
-/-!
+/-
 # ACE: abstract provenance admission and erasure soundness (Lean 4 core)
 
 A small independently checkable theorem boundary. Cryptographic validity and

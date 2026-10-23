@@ -1,4 +1,4 @@
-/-!
+/-
 ACE v0.4: Witnessed checkpoint implications. Lean 4 core-only.
 
 These statements isolate the *mathematical* part of a witness quorum protocol.

@@ -1,4 +1,4 @@
-/-!
+/-
 # ACE Foundations (Lean 4, core-only)
 
 A deliberately small proof boundary: clone invariance, monotonic survival under

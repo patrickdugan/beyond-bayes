@@ -1,4 +1,4 @@
-/-!
+/-
 ACE v0.5: monotonic anchor quorum implications (Lean 4 core).
 
 Persistence, cryptographic authentication, and antirollback of each honest
