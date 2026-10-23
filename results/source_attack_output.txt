@@ -1,0 +1,23 @@
+              scenario  truth                   policy   unsafe false lock
+                 clean   safe       ID-blind-e-process     None      0.005
+                 clean   safe       ACE-v0.3-admission     None      0.005
+                 clean  risky       ID-blind-e-process   0.0175       None
+                 clean  risky       ACE-v0.3-admission   0.0175       None
+      fabricated_roots   safe       ID-blind-e-process     None        0.0
+      fabricated_roots   safe       ACE-v0.3-admission     None        0.0
+      fabricated_roots  risky       ID-blind-e-process   0.3575       None
+      fabricated_roots  risky       ACE-v0.3-admission     0.01       None
+     selective_erasure   safe       ID-blind-e-process     None     0.1475
+     selective_erasure   safe       ACE-v0.3-admission     None      0.845
+     selective_erasure  risky       ID-blind-e-process    0.415       None
+     selective_erasure  risky       ACE-v0.3-admission   0.0025       None
+   forgery_and_erasure   safe       ID-blind-e-process     None     0.1525
+   forgery_and_erasure   safe       ACE-v0.3-admission     None       0.86
+   forgery_and_erasure  risky       ID-blind-e-process   0.9725       None
+   forgery_and_erasure  risky       ACE-v0.3-admission     0.02       None
+   compromised_sources   safe       ID-blind-e-process     None     0.4775
+   compromised_sources   safe       ACE-v0.3-admission     None     0.8675
+   compromised_sources  risky       ID-blind-e-process   0.7275       None
+   compromised_sources  risky       ACE-v0.3-admission      0.0       None
+Exact worst-case false exclusion with adaptive erasures + flips:  {'n6_k0': 0.01183999999999999, 'n6_k1': 0.006719999999999993, 'n8_k1': 0.008767999999999993}
+Correlated-source exact counterexample:  {'n_nominal_sources': 24, 'one_latent_group': True, 'risk_false_authorization_exact': 0.19999999999999996, 'alpha': 0.05, 'reason': 'independence assumption violated: 24 signed IDs, one latent observation'}
