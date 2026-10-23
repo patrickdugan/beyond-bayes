@@ -1,0 +1,573 @@
+{
+  "campaign_policy": {
+    "campaign_id": "08e15c5cfd3fc13d271afd586dfa16aaebe0a600fa0481bb9bd810eb65085483",
+    "max_faulty": 1,
+    "quorum": 3,
+    "replicas": [
+      {
+        "public_key_hex": "f0b12ecc2086ef52494ff6e17fa3653ba035946774d3203dff8cd4575948350b",
+        "replica_id": "child-0"
+      },
+      {
+        "public_key_hex": "7314401c891d59bd8d055a5c52fb72d52c4ce161439f0857fc6c8b7685657872",
+        "replica_id": "child-1"
+      },
+      {
+        "public_key_hex": "e56becfbc3b15eae17879f6133288bcd548d33d4afe0638e60fd5baac72671c6",
+        "replica_id": "child-2"
+      },
+      {
+        "public_key_hex": "294bbcce3b789b9eee2d170bd65acb54731e94c664035677be56df64cb218507",
+        "replica_id": "child-3"
+      }
+    ],
+    "scale": 1000000000000,
+    "schema": "ACE-campaign-policy-v1",
+    "total_units": 10000000000
+  },
+  "instrument_measurements": [
+    {
+      "counter": 1,
+      "epoch": 1,
+      "instrument_id": "instrument-alpha",
+      "report": {
+        "bit": 0,
+        "experiment_id": "experiment-2026-10-23",
+        "protocol_commitment": "e73bfcf8754d5177cd7a1c78fd4a9517991a7f74b235be1aec139071b5c89855",
+        "signature_hex": "75d7d0d1aef7ce02ae0c864e24685fed48e636173d38e56cd7ca7a55047281f9b9df0d19df4ad748faf7af0f56fbcecd6d8e840ac910878ea8fa311754df940b",
+        "slot_id": "unit-0"
+      },
+      "schema": "ACE-instrument-measurement-v1",
+      "signature_hex": "f2c79d2fb5807d578cc57f916d2bda16024f9dba820490c0abdd4d1d17bcf0095a740b63f7a9f19d6b09ff65bf7c30623c95ad10ac8aeb2d55aade2492c3990d",
+      "start_digest": "4ed4709ff4185d5caf67c12175d0d5301f9de8e744039ce84b18a334d8aca94d"
+    },
+    {
+      "counter": 2,
+      "epoch": 1,
+      "instrument_id": "instrument-alpha",
+      "report": {
+        "bit": 0,
+        "experiment_id": "experiment-2026-10-23",
+        "protocol_commitment": "e73bfcf8754d5177cd7a1c78fd4a9517991a7f74b235be1aec139071b5c89855",
+        "signature_hex": "553401e22f5895c65715eeddc25f1d8a2bb05a5feed63cb3920e6622b82723407ef1eb326a6c1e00b8a8d73286231285290f2b63c6fb735b7ebb8b17f0a72005",
+        "slot_id": "unit-1"
+      },
+      "schema": "ACE-instrument-measurement-v1",
+      "signature_hex": "61df7c6990b68dc17c23f687007f1205ea59d8a841801e4230112aea61f36c1232cb0bd7083c9fe67398fceaa5e72a2ef7ce00491a121cd964f33f66baba340a",
+      "start_digest": "4ed4709ff4185d5caf67c12175d0d5301f9de8e744039ce84b18a334d8aca94d"
+    },
+    {
+      "counter": 3,
+      "epoch": 1,
+      "instrument_id": "instrument-alpha",
+      "report": {
+        "bit": 0,
+        "experiment_id": "experiment-2026-10-23",
+        "protocol_commitment": "e73bfcf8754d5177cd7a1c78fd4a9517991a7f74b235be1aec139071b5c89855",
+        "signature_hex": "c67083afefa86b8149bce8d72a3949ee4196b4d6884fa113568c3d47932667deab1d2c443ef1a4ea8e17733cf53e27761c8a7d795e055cc0961eb9696462b90f",
+        "slot_id": "unit-2"
+      },
+      "schema": "ACE-instrument-measurement-v1",
+      "signature_hex": "8f2ebf88d87753ce0893fff66d64e64e2bddb0edbebebda1da621144de699537c33eea4103fce785ea3dc83004e3afe17456949c7fdeb799823c109f17ac0c09",
+      "start_digest": "4ed4709ff4185d5caf67c12175d0d5301f9de8e744039ce84b18a334d8aca94d"
+    },
+    {
+      "counter": 4,
+      "epoch": 1,
+      "instrument_id": "instrument-alpha",
+      "report": {
+        "bit": 0,
+        "experiment_id": "experiment-2026-10-23",
+        "protocol_commitment": "e73bfcf8754d5177cd7a1c78fd4a9517991a7f74b235be1aec139071b5c89855",
+        "signature_hex": "b9640f9be4b8fd1727df9164731beb5b041087784de218c0a63da149b4757d95885db820d785c7a0e59a6e569b1cf6904790c9c6eda61f4bb47ac02b1e0f8b0c",
+        "slot_id": "unit-3"
+      },
+      "schema": "ACE-instrument-measurement-v1",
+      "signature_hex": "402735217c433508908c1c3d90c66669c813dee3aaa7c17edebea1b4900ffabb762f2e4552508920199bdec0fec69f7bb0cb4f7564e4aff83695195661abab05",
+      "start_digest": "4ed4709ff4185d5caf67c12175d0d5301f9de8e744039ce84b18a334d8aca94d"
+    }
+  ],
+  "registry_history": [
+    {
+      "administrator_signature": "368b687412950553116c9555cb7cc68bee55193e34e1b6d9f2ea849bedaebb53dfcfdb267d8b69b18ae1b5e11f47e3bdac33a0d2f94bf5654d44876ef2cc2e08",
+      "event": {
+        "cap_units": 50000000000,
+        "closed_history": [],
+        "kind": "enroll",
+        "lifetime_allocated": 0,
+        "new_scope": {
+          "max_faulty": 1,
+          "principal_id": "org-demo",
+          "quorum": 3,
+          "replicas": [
+            {
+              "public_key_hex": "608610e589afa98e358d3cf2369d7f07be2a0659de78db15de1e727385941b74",
+              "replica_id": "root-0"
+            },
+            {
+              "public_key_hex": "88c22483cd28e83da2638675811e6318c0233f27a5cc1cf9f1e0e69ca67b71c9",
+              "replica_id": "root-1"
+            },
+            {
+              "public_key_hex": "e77acb2038d4faaba3c42e8325f7e58bb883ca9a52fc1299d39c6985796f04ab",
+              "replica_id": "root-2"
+            },
+            {
+              "public_key_hex": "991b695ed2713b963e587b764f974319ad75fdccf4f9f6631a9df68df750ff8e",
+              "replica_id": "root-3"
+            }
+          ],
+          "resource_id": "protected-action",
+          "scale": 1000000000000,
+          "schema": "ACE-risk-scope-policy-v1",
+          "scope_id": "root-alpha-2026-scope",
+          "total_units": 50000000000
+        },
+        "old_scope": "0000000000000000000000000000000000000000000000000000000000000000",
+        "old_scope_head": "0000000000000000000000000000000000000000000000000000000000000000",
+        "previous_digest": "0000000000000000000000000000000000000000000000000000000000000000",
+        "registry": "4c5c92134bfe88fbc393035f2308239ce17b681ecd05985669fb942f82525b6e",
+        "schema": "ACE-root-registry-event-v1",
+        "sequence": 1
+      },
+      "votes": [
+        {
+          "replica_id": "registry-0",
+          "signature_hex": "e4105783fae2461a8a84d0c61d310486cc92bcd6ed129d9a7abea8542d5f5cc1b36d0adf7bce6cd9d46ba7095a5e7f5eb81d3118c936f20c13e9607ed36fa809"
+        },
+        {
+          "replica_id": "registry-1",
+          "signature_hex": "263d9a87681fa119eb3effcf36c4eca160c9332701e9b447d45a1e59bf5611bc74d128d3f205c7f822507780297053d0e7610d02613fe253fdddd2ac6d3a010d"
+        },
+        {
+          "replica_id": "registry-2",
+          "signature_hex": "2b5861c3fe1ac7b22ef44cb9abd010c5232a8557ee1e6f0c19a26c47cafec0999d534177003e5e405b835ba24fcef477b9ae2715fae4309f9a5d50e334023202"
+        },
+        {
+          "replica_id": "registry-3",
+          "signature_hex": "fe8ba3b99117317c36a6bc7350b3b9723c83a82467ca50733f5f4dd837e203ebe8ece35e593110a3048fc6e52d6b39f1bd85f53674b55b84eea7c0934c190101"
+        }
+      ]
+    }
+  ],
+  "registry_policy": {
+    "administrator_key": "a09b79a14c8645b94f480f684e5c5e78c0bd699be0fc37208eb18919f7e6b39f",
+    "instruments": [
+      {
+        "epoch": 1,
+        "instrument_id": "instrument-alpha",
+        "public_key_hex": "9eeafd29681aa4bc7ace4eb2aa1556af0b0de07315a7104543d5b92e3e7651bb"
+      }
+    ],
+    "max_faulty": 1,
+    "quorum": 3,
+    "registry_id": "ace-global-root-directory-2026",
+    "replicas": [
+      {
+        "public_key_hex": "6ebefd39f338c6cdda554ef0e7fb1de05687b71a2b7d05ca99414b2f1f320fb6",
+        "replica_id": "registry-0"
+      },
+      {
+        "public_key_hex": "7a2cd7018d10375a25275365532942a6d15c9fdd2a5472daeac7d57bd5ddf4f8",
+        "replica_id": "registry-1"
+      },
+      {
+        "public_key_hex": "a22c75352bcdfb1cf03910a85b34ffa732c7ff8826c9cc91a990522f2c67e4a0",
+        "replica_id": "registry-2"
+      },
+      {
+        "public_key_hex": "3742e702361e4700053eb76e4f4caaa313767facddad35ea901feba13f623f68",
+        "replica_id": "registry-3"
+      }
+    ],
+    "schema": "ACE-root-registry-policy-v1"
+  },
+  "reservation_certificate": {
+    "record": {
+      "campaign": "3416f615641b0f1b0344db5999ce17626517a98f2281972ef741276274051c90",
+      "kind": "reserve",
+      "payload": {
+        "action": "8069955f8f7a2d068ad4f024450fc00ae4549144cffc80df10d90282bb563959",
+        "alpha_units": 10000000000,
+        "challenge": "8c7b7b5f1f44d9e32e493f85a6a5fddb",
+        "cluster_plan": "b7efe90d7cc0d17b31e99efff56a2b27a6b9fb52156adf82b35ec7cf4b750a95",
+        "protocol": "e73bfcf8754d5177cd7a1c78fd4a9517991a7f74b235be1aec139071b5c89855",
+        "spent_units": 10000000000,
+        "v2_policy": "cec7ef19a74c1fe39a97c7e73f621ec77e3a92d61e7c5231c95a8acd70bbe258",
+        "witness_policy": "93e69ab0e00a2750721180e36ed2f076a81ceafb08b029ecfd24ed1190cc53ed"
+      },
+      "previous_digest": "0000000000000000000000000000000000000000000000000000000000000000",
+      "schema": "ACE-campaign-record-v1",
+      "sequence": 1
+    },
+    "votes": [
+      {
+        "record_digest": "9b5454e9aee667c78db5f7b2bc2a8881ec6fef1099e9cc0f0dc3817efd43b000",
+        "replica_id": "child-0",
+        "signature_hex": "671137dfb9091977e4f821b5acd8977d2aab00759b1754c9a6f9827e0aef211a95e202e0b3cc4364f959148a5e5abae62219ab8d896f6441ea2e449ce193280d"
+      },
+      {
+        "record_digest": "9b5454e9aee667c78db5f7b2bc2a8881ec6fef1099e9cc0f0dc3817efd43b000",
+        "replica_id": "child-1",
+        "signature_hex": "b6b2e853882f8d2dd57538cd5bc50530de42e07199a8a30eba22ff3d0eae6a6d694284a18caeb4335fc84ff7f9b91d3b4f43f5caf14d18d0275f32963ed1250d"
+      },
+      {
+        "record_digest": "9b5454e9aee667c78db5f7b2bc2a8881ec6fef1099e9cc0f0dc3817efd43b000",
+        "replica_id": "child-2",
+        "signature_hex": "28d2135446380d2470f4d43bb0aaf09789dce7ab56eb8d64a56bedfad558cf8d2e4ba640b11e6fb9e05cf1ec4a77d4e0a1252813f65aa3f82d7b7647bb971c06"
+      },
+      {
+        "record_digest": "9b5454e9aee667c78db5f7b2bc2a8881ec6fef1099e9cc0f0dc3817efd43b000",
+        "replica_id": "child-3",
+        "signature_hex": "28582755e60ba4e40c7b88093cf873cb54b8a0545682b98a47b2bd82d2728ae2437fcc4674fcfb1c1947d67b0fd397d7081674965f6ee0cabd11ec5b1581760d"
+      }
+    ]
+  },
+  "schema": "ACE-measurement-audit-v1",
+  "scope_history": [
+    {
+      "grant": {
+        "allocated_units": 10000000000,
+        "child_id": "08e15c5cfd3fc13d271afd586dfa16aaebe0a600fa0481bb9bd810eb65085483",
+        "child_nonce": "child-start-nonce-2026",
+        "child_policy": "3416f615641b0f1b0344db5999ce17626517a98f2281972ef741276274051c90",
+        "child_units": 10000000000,
+        "previous_digest": "0000000000000000000000000000000000000000000000000000000000000000",
+        "schema": "ACE-risk-scope-grant-v1",
+        "scope": "0091c8c5a6fd4546362f6bd9223cb1cfbe0963a68fb0a9aa7c88907a472ad206",
+        "sequence": 1
+      },
+      "votes": [
+        {
+          "grant_digest": "2f9fcdd69d2824d095b1ea6f2a84a15d42f9c6baac560f704741bc89c048222f",
+          "replica_id": "root-0",
+          "signature_hex": "23778812906029785df173341788c90ea1c1b097b0ef81ccd8538e85a6a737c0d8c693881afb6e94701df18df7e0caa6a3327663dea12fe6d492dbd2f513f102"
+        },
+        {
+          "grant_digest": "2f9fcdd69d2824d095b1ea6f2a84a15d42f9c6baac560f704741bc89c048222f",
+          "replica_id": "root-1",
+          "signature_hex": "f3be4ac08988d50abb78be82a1a6872e08e4d4059d92f51092da155603f5ca798e3679614625b2cb9e2d23b8b4515552d8ffb3450a5c0030e7cf44099d525c0d"
+        },
+        {
+          "grant_digest": "2f9fcdd69d2824d095b1ea6f2a84a15d42f9c6baac560f704741bc89c048222f",
+          "replica_id": "root-2",
+          "signature_hex": "a6f4969fdbcb50fba643ae48ac89e5d1bcf8a444ce7e79e79ffbeccb7d4705103be2e2b850529f5fe48983a829e95df991163e9c2407f66b00558a789bbaff03"
+        },
+        {
+          "grant_digest": "2f9fcdd69d2824d095b1ea6f2a84a15d42f9c6baac560f704741bc89c048222f",
+          "replica_id": "root-3",
+          "signature_hex": "c800413409e9d02449686ba3d25c7fa510e435c1f95d4bfdb144c1017cab53c61a210313d87ff8f4db1541a707a70f70de59b00e3ace8365250f15799ac21805"
+        }
+      ]
+    }
+  ],
+  "scope_policy": {
+    "max_faulty": 1,
+    "principal_id": "org-demo",
+    "quorum": 3,
+    "replicas": [
+      {
+        "public_key_hex": "608610e589afa98e358d3cf2369d7f07be2a0659de78db15de1e727385941b74",
+        "replica_id": "root-0"
+      },
+      {
+        "public_key_hex": "88c22483cd28e83da2638675811e6318c0233f27a5cc1cf9f1e0e69ca67b71c9",
+        "replica_id": "root-1"
+      },
+      {
+        "public_key_hex": "e77acb2038d4faaba3c42e8325f7e58bb883ca9a52fc1299d39c6985796f04ab",
+        "replica_id": "root-2"
+      },
+      {
+        "public_key_hex": "991b695ed2713b963e587b764f974319ad75fdccf4f9f6631a9df68df750ff8e",
+        "replica_id": "root-3"
+      }
+    ],
+    "resource_id": "protected-action",
+    "scale": 1000000000000,
+    "schema": "ACE-risk-scope-policy-v1",
+    "scope_id": "root-alpha-2026-scope",
+    "total_units": 50000000000
+  },
+  "start_history": [
+    {
+      "record": {
+        "arm_signature": "e829b9041adabe29de2bd7c3f6c4983d385243c2c9aa5bbe9b481b10885de3715b185e1526df154508d64cc61c02927e9725c851d3e1291be8c8e6341e8b3508",
+        "binding": {
+          "action": "8069955f8f7a2d068ad4f024450fc00ae4549144cffc80df10d90282bb563959",
+          "campaign": "3416f615641b0f1b0344db5999ce17626517a98f2281972ef741276274051c90",
+          "cluster_plan": "b7efe90d7cc0d17b31e99efff56a2b27a6b9fb52156adf82b35ec7cf4b750a95",
+          "counter_start": 0,
+          "epoch": 1,
+          "experiment_nonce": "exp-nonce-signer-2026",
+          "instrument_id": "instrument-alpha",
+          "max_samples": 4,
+          "protocol": "e73bfcf8754d5177cd7a1c78fd4a9517991a7f74b235be1aec139071b5c89855",
+          "registry": "4c5c92134bfe88fbc393035f2308239ce17b681ecd05985669fb942f82525b6e",
+          "registry_head": "5c93e782517c31a692a8123740767e05acb8fffb63fdabc691126dfb08f00046",
+          "reservation": "9b5454e9aee667c78db5f7b2bc2a8881ec6fef1099e9cc0f0dc3817efd43b000",
+          "root_grant": "2f9fcdd69d2824d095b1ea6f2a84a15d42f9c6baac560f704741bc89c048222f",
+          "schema": "ACE-measurement-start-v1",
+          "scope": "0091c8c5a6fd4546362f6bd9223cb1cfbe0963a68fb0a9aa7c88907a472ad206",
+          "scope_head": "2f9fcdd69d2824d095b1ea6f2a84a15d42f9c6baac560f704741bc89c048222f",
+          "v2_policy": "cec7ef19a74c1fe39a97c7e73f621ec77e3a92d61e7c5231c95a8acd70bbe258",
+          "witness_policy": "93e69ab0e00a2750721180e36ed2f076a81ceafb08b029ecfd24ed1190cc53ed"
+        },
+        "previous_digest": "0000000000000000000000000000000000000000000000000000000000000000",
+        "registry": "4c5c92134bfe88fbc393035f2308239ce17b681ecd05985669fb942f82525b6e",
+        "schema": "ACE-start-record-v1",
+        "sequence": 1
+      },
+      "votes": [
+        {
+          "replica_id": "registry-0",
+          "signature_hex": "6b519961f72b8c633675d91bc8b9bdf88154cfc12dbaa2109ebfa4ed9d2b6c0e2c6e034e9b599128e8326b7f03b791cd42bf5f0994c0f775e7075a93a89e3e05"
+        },
+        {
+          "replica_id": "registry-1",
+          "signature_hex": "6ecaf7464e2afedaee149da2ac86ca9f1d401e319b1c76a021fbd5799e774c1ba05949f3b7ce4046c3de46cf57b86699e4427a95be4d530526342578048fba0f"
+        },
+        {
+          "replica_id": "registry-2",
+          "signature_hex": "cc671003895674182dfa81a041b381e15b606f5432cb6c997135ac016b948dafdf5574b540ca8254dac29552fdff7e3e59d99e30ba91d8573e1c5e366227810e"
+        },
+        {
+          "replica_id": "registry-3",
+          "signature_hex": "51d44642bc3abcd72991f30ec827044d3a014ab0a7cd028e9e1bdd72cedf5b777c692276297d552055f51385bc2d4948d61d29619881f4adeacef9fb6ad2780d"
+        }
+      ]
+    }
+  ],
+  "v2_certificate": {
+    "action_intent": {
+      "challenge": "8c7b7b5f1f44d9e32e493f85a6a5fddb",
+      "operation": "measure-and-test",
+      "parameters": {
+        "ace_campaign": {
+          "alpha_units": 10000000000,
+          "campaign_commitment": "3416f615641b0f1b0344db5999ce17626517a98f2281972ef741276274051c90",
+          "previous_digest": "0000000000000000000000000000000000000000000000000000000000000000",
+          "reservation_sequence": 1,
+          "schema": "ACE-campaign-context-v1",
+          "spent_units": 10000000000,
+          "total_units": 10000000000
+        },
+        "ace_registry": "4c5c92134bfe88fbc393035f2308239ce17b681ecd05985669fb942f82525b6e",
+        "ace_scope": {
+          "child_id": "08e15c5cfd3fc13d271afd586dfa16aaebe0a600fa0481bb9bd810eb65085483",
+          "child_policy": "3416f615641b0f1b0344db5999ce17626517a98f2281972ef741276274051c90",
+          "child_units": 10000000000,
+          "grant_digest": "2f9fcdd69d2824d095b1ea6f2a84a15d42f9c6baac560f704741bc89c048222f",
+          "principal_id": "org-demo",
+          "resource_id": "protected-action",
+          "schema": "ACE-scoped-action-v1",
+          "scope_commitment": "0091c8c5a6fd4546362f6bd9223cb1cfbe0963a68fb0a9aa7c88907a472ad206"
+        }
+      },
+      "resource": "protected-action",
+      "schema": "ACE-action-intent-v2"
+    },
+    "authorization_policy_commitment": "cec7ef19a74c1fe39a97c7e73f621ec77e3a92d61e7c5231c95a8acd70bbe258",
+    "authorization_policy_v2": {
+      "action_commitment": "8069955f8f7a2d068ad4f024450fc00ae4549144cffc80df10d90282bb563959",
+      "cluster_plan_commitment": "b7efe90d7cc0d17b31e99efff56a2b27a6b9fb52156adf82b35ec7cf4b750a95",
+      "protocol_commitment": "e73bfcf8754d5177cd7a1c78fd4a9517991a7f74b235be1aec139071b5c89855",
+      "schema": "ACE-clustered-authorization-policy-v2",
+      "witnessed_policy_commitment": "93e69ab0e00a2750721180e36ed2f076a81ceafb08b029ecfd24ed1190cc53ed"
+    },
+    "claimed_decision_v2": {
+      "admitted_clusters": 4,
+      "authorized": true,
+      "cluster_bits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "conflicting_clusters": [],
+      "equivocated_slots": [],
+      "missing_clusters": 0,
+      "quarantined_reports": 0,
+      "robust_max_log_e": 5.545177444479563
+    },
+    "cluster_plan": {
+      "alpha": 0.01,
+      "clusters": [
+        {
+          "cluster_id": "cluster-0",
+          "slot_ids": [
+            "unit-0"
+          ]
+        },
+        {
+          "cluster_id": "cluster-1",
+          "slot_ids": [
+            "unit-1"
+          ]
+        },
+        {
+          "cluster_id": "cluster-2",
+          "slot_ids": [
+            "unit-2"
+          ]
+        },
+        {
+          "cluster_id": "cluster-3",
+          "slot_ids": [
+            "unit-3"
+          ]
+        }
+      ],
+      "conditional_null": {
+        "initial_state": "iid",
+        "rows": [
+          {
+            "after_one": "iid",
+            "after_zero": "iid",
+            "bet_q": 0.2,
+            "high": 0.8,
+            "low": 0.8,
+            "state": "iid"
+          }
+        ],
+        "version": 1
+      },
+      "corruption_budget_clusters": 0,
+      "protocol_commitment": "e73bfcf8754d5177cd7a1c78fd4a9517991a7f74b235be1aec139071b5c89855",
+      "version": 2
+    },
+    "schema": "ACE-witnessed-clustered-certificate-v2",
+    "witnessed_log_v1": {
+      "claimed_decision": {
+        "accepted_slots": 4,
+        "authorized": true,
+        "equivocations": [],
+        "missing_slots": 0,
+        "robust_max_log_e": 5.545177444479563
+      },
+      "complete_log": [
+        {
+          "bit": 0,
+          "experiment_id": "experiment-2026-10-23",
+          "protocol_commitment": "e73bfcf8754d5177cd7a1c78fd4a9517991a7f74b235be1aec139071b5c89855",
+          "signature_hex": "75d7d0d1aef7ce02ae0c864e24685fed48e636173d38e56cd7ca7a55047281f9b9df0d19df4ad748faf7af0f56fbcecd6d8e840ac910878ea8fa311754df940b",
+          "slot_id": "unit-0"
+        },
+        {
+          "bit": 0,
+          "experiment_id": "experiment-2026-10-23",
+          "protocol_commitment": "e73bfcf8754d5177cd7a1c78fd4a9517991a7f74b235be1aec139071b5c89855",
+          "signature_hex": "553401e22f5895c65715eeddc25f1d8a2bb05a5feed63cb3920e6622b82723407ef1eb326a6c1e00b8a8d73286231285290f2b63c6fb735b7ebb8b17f0a72005",
+          "slot_id": "unit-1"
+        },
+        {
+          "bit": 0,
+          "experiment_id": "experiment-2026-10-23",
+          "protocol_commitment": "e73bfcf8754d5177cd7a1c78fd4a9517991a7f74b235be1aec139071b5c89855",
+          "signature_hex": "c67083afefa86b8149bce8d72a3949ee4196b4d6884fa113568c3d47932667deab1d2c443ef1a4ea8e17733cf53e27761c8a7d795e055cc0961eb9696462b90f",
+          "slot_id": "unit-2"
+        },
+        {
+          "bit": 0,
+          "experiment_id": "experiment-2026-10-23",
+          "protocol_commitment": "e73bfcf8754d5177cd7a1c78fd4a9517991a7f74b235be1aec139071b5c89855",
+          "signature_hex": "b9640f9be4b8fd1727df9164731beb5b041087784de218c0a63da149b4757d95885db820d785c7a0e59a6e569b1cf6904790c9c6eda61f4bb47ac02b1e0f8b0c",
+          "slot_id": "unit-3"
+        }
+      ],
+      "consistency_path": [],
+      "endorsements": [
+        {
+          "head_digest": "13b0025a9e0036054be2d1079e36b676439ee89d539a111b249ed02860966482",
+          "signature_hex": "551a3fa47032313a31291e7f6e3b4e24acfcd81063738619b66f495f77381eeb173d70bfaa434b28d5d2f1d04d15c129f499fe6efc78b00b7c9bfa20510bf100",
+          "witness_id": "notary-0"
+        },
+        {
+          "head_digest": "13b0025a9e0036054be2d1079e36b676439ee89d539a111b249ed02860966482",
+          "signature_hex": "87290eb6b8c34065d3b14a89f31146d146df26770a64d806148053c5c3fd2b8f270c1c19395cf89c6d8ca837b84f9a6768ccf5582f8293b6a687cb02ea8f6d02",
+          "witness_id": "notary-1"
+        },
+        {
+          "head_digest": "13b0025a9e0036054be2d1079e36b676439ee89d539a111b249ed02860966482",
+          "signature_hex": "612c0b9170014dc695cc20ac89c9d132cb0b0c3ae6dea00774801da6b397f0912fb174231e2fb0515a844335e22ad3015399447ea9a28711edaacb2a178d3e0e",
+          "witness_id": "notary-2"
+        }
+      ],
+      "previous_head": null,
+      "protocol": {
+        "alpha": 0.05,
+        "bet_q": 0.2,
+        "challenge": "8c7b7b5f1f44d9e32e493f85a6a5fddb",
+        "corruption_budget": 0,
+        "experiment_id": "experiment-2026-10-23",
+        "null_p": 0.8,
+        "slots": [
+          {
+            "dependence_domain": "domain-0",
+            "public_key_hex": "2a300f3b327692698eab6aa0d13165f5a49037d210f5fcf89957bbe8db287956",
+            "slot_id": "unit-0",
+            "source_id": "source-0"
+          },
+          {
+            "dependence_domain": "domain-1",
+            "public_key_hex": "540c7dc4cbb98183981999ccbca1228240482a7590dc20641112bed4ef25e301",
+            "slot_id": "unit-1",
+            "source_id": "source-1"
+          },
+          {
+            "dependence_domain": "domain-2",
+            "public_key_hex": "7434d17df0ce53840c7427b6a64066b24df7d8a76bff2cef1a37b3b1c6c4de06",
+            "slot_id": "unit-2",
+            "source_id": "source-2"
+          },
+          {
+            "dependence_domain": "domain-3",
+            "public_key_hex": "52517e76ce94c07ab76b3bfba95e613ba1e7a03885bee2875748d3f1527e6de2",
+            "slot_id": "unit-3",
+            "source_id": "source-3"
+          }
+        ],
+        "version": 1
+      },
+      "schema": "ACE-witnessed-certificate-v1",
+      "signed_head": {
+        "head": {
+          "domain": "ACE:head:v1",
+          "epoch": 0,
+          "policy_commitment": "93e69ab0e00a2750721180e36ed2f076a81ceafb08b029ecfd24ed1190cc53ed",
+          "previous_digest": "0000000000000000000000000000000000000000000000000000000000000000",
+          "protocol_commitment": "e73bfcf8754d5177cd7a1c78fd4a9517991a7f74b235be1aec139071b5c89855",
+          "root_hex": "ba28c0fca856822550b728273846acb00a451401d676adf1fcf4e7249cd0ecfd",
+          "size": 4
+        },
+        "log_signature_hex": "9402a3d01134461e4e39be1cf8bc85f6de9dcb693b5ebe1d91fc8b4b7f64c93468edbfc6178ac75e84cd49f41f77625413bc0bd864f227cd1815d5eedd205a03"
+      },
+      "witness_policy": {
+        "checkpoint_quorum": 3,
+        "log_public_key_hex": "8f07e97e1a787aace222897da784c65bc8aeeb00bdeabe553b1399e11721aaac",
+        "max_faulty": 1,
+        "protocol_commitment": "e73bfcf8754d5177cd7a1c78fd4a9517991a7f74b235be1aec139071b5c89855",
+        "receipt_quorum": 3,
+        "schema": "ACE-witness-policy-v1",
+        "witnesses": [
+          {
+            "public_key_hex": "50378a47da4374a275453e1c6cfbf9816a6a196b18f3809ffe0ee5a2b2375a5b",
+            "witness_id": "notary-0"
+          },
+          {
+            "public_key_hex": "85447b85dcbf6a1089369e8fc67d893ac97ec62e6d047868dd1f3de56a497e35",
+            "witness_id": "notary-1"
+          },
+          {
+            "public_key_hex": "f8d1ceda67d4d6808ecf04ab54760e7cf43bd5dfe1efc72c0f7c74cf9f88a140",
+            "witness_id": "notary-2"
+          },
+          {
+            "public_key_hex": "39cc2bec57562b8e5126a453783f9ac99051d71ac92a28da470e9ea5a2f65dcb",
+            "witness_id": "notary-3"
+          }
+        ]
+      }
+    }
+  }
+}

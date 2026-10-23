@@ -1,0 +1,12 @@
+{
+  "alpha": 0.05,
+  "boundary": "Device signatures cannot prove host-visible data were unobserved before the receipt.",
+  "candidate_attempts": 20,
+  "exact_poststart": 0.05,
+  "exact_prepeek": 0.6415140775914581,
+  "experiment": "ACE-start-ordering-synthetic-uniform-null",
+  "honest_poststart_single_reading": 0.05046,
+  "prepeek_software_reporter": 0.6418,
+  "seed": 1010,
+  "trials": 100000
+}

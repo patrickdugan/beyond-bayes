@@ -1,28 +1,46 @@
 # Beyond Bayes: Adversarial Constraint Epistemics (ACE)
 
-## v0.9: principal-wide error control across child campaigns
+## v0.10: immutable root enrollment and signed measurement starts
 
-The [parent-scope prototype](RESEARCH_V09.md) adds an externally pinned principal/resource
-risk budget that issues nonrefundable quorum-signed grants to child campaigns.
-Every child policy commits to its parent's grant, and a scoped action gate
-checks the live parent history before consuming the child's v2 authorization.
-This addresses campaign-ID resets under a single externally enforced scope.
+See [RESEARCH_V10.md](RESEARCH_V10.md), [RESULTS_V10.md](RESULTS_V10.md) and [HANDOFF_V10.md](HANDOFF_V10.md). The new `root_registry.py` admits exactly one active scoped budget per externally pinned principal/resource and permits administrator-approved rollover with signed historical allocations carried forward. `measurement_start.py` binds a witnessed instrument start to the live registry head, parent grant, child reservation and full v2 policy, then signs every sample with a monotone registered instrument counter. `verify_measurement.py` independently replays the full stack and checks that every logged source report has a matching instrument signature and counter.
 
-A valid error guarantee still requires sampling and allocation to be
-precommitted relative to the full parent-scope history. [v0.9 benchmarks](RESULTS_V09.md)
-show the reset attack and preallocation-peeking counterexample. See the
-[engineering handoff](HANDOFF_V09.md) for further security boundaries.
+This is a synthetic acquisition-order model, **not physical timestamp attestation**. The caller supplies sample values to the simulated device and can still pre-peek them. The four SQLite signers and local action lock are research fixtures. All conditional probability guarantees depend on the real sample-generation and information-flow assumptions.
 
 ```sh
 python -m unittest discover -q
-python demo_scope.py --output /tmp/ace-scope.json --pins /tmp/ace-scope-pins.json
-python verify_scope.py /tmp/ace-scope.json --pins /tmp/ace-scope-pins.json
+python demo_measurement.py --output /tmp/ace-v10.json --pins /tmp/ace-v10-pins.json
+python verify_measurement.py /tmp/ace-v10.json --pins /tmp/ace-v10-pins.json
+```
+
+
+## v0.9: parent-scope error budgets across campaigns
+
+ACE now supports an **externally pinned principal/resource risk scope** that
+issues nonrefundable, quorum-signed alpha grants to child campaigns. A child
+is admitted only with a scope-derived ID, its exact budget and signer policy,
+and a live root grant. `ScopeActionGate` demands a matching `ace_scope`
+commitment inside the v2 action and then invokes the existing child
+`CampaignActionGate`. The standalone signed-history verifier is `verify_scope.py`.
+
+The central claim is conditional: if each child's attempts satisfy their
+error bounds given **all previous parent-scope evidence** and the root cap is
+`A`, then the probability of any false authorization across child campaigns
+is at most `A`. Authentication and accounting enforce one component of this
+argument; the sampling model and timely experiment-start attestations are
+external requirements. The synthetic benchmark demonstrates both a reset
+attack and the consequences of preallocation data peeking.
+
+```sh
+python -m unittest discover -q
+python demo_scope.py --output /tmp/ace-root.json --pins /tmp/ace-root-pins.json
+python verify_scope.py /tmp/ace-root.json --pins /tmp/ace-root-pins.json
 python benchmark_scope.py --trials 100000 --seed 9209 --output results/v09_scope_benchmark.json
 ```
 
-This local SQLite quorum protocol is research-only. A trusted scope registry,
-physical measurement-start attestation, remote independent storage, and an
-idempotent external executor are still required for real deployment.
+See [v0.9 research](RESEARCH_V09.md), [results](RESULTS_V09.md), and
+[handoff](HANDOFF_V09.md). Scope registry integrity, network-separated
+replicas, protected measurement start times and executor idempotency remain
+future research. This is a synthetic prototype, unsuitable for real assets.
 
 ## v0.6: conditional evidence and dependent-source clusters
 
