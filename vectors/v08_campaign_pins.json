@@ -1,0 +1,36 @@
+{
+  "campaign_commitment": "2993e0441df9a2c3f6c0b86207dae5d21a6bb32871e2a19577d7a5a67d88d926",
+  "campaign_policy": {
+    "campaign_id": "regtest-test-campaign-0123456789",
+    "max_faulty": 1,
+    "quorum": 3,
+    "replicas": [
+      {
+        "public_key_hex": "c24dbae0becd36c67109a14564aa4a60c57085aa23292c75cb097c7d41c879e3",
+        "replica_id": "anchor-0"
+      },
+      {
+        "public_key_hex": "a8e4a350e04ae4e75c35b83893af0213ed5af51047f40be84c1eba33869d89cf",
+        "replica_id": "anchor-1"
+      },
+      {
+        "public_key_hex": "134b210afb90138f7fd52a57e477d59186e92d13ee454486f94f2d9e452372ed",
+        "replica_id": "anchor-2"
+      },
+      {
+        "public_key_hex": "ea9bfa863d947fb5e6a08606ee6b1dd62423bb1f79da55ff71a9b236988545cc",
+        "replica_id": "anchor-3"
+      }
+    ],
+    "scale": 1000000000000,
+    "schema": "ACE-campaign-policy-v1",
+    "total_units": 50000000000
+  },
+  "consumption_digest": "8c449c06d2ee1a236e6d0fe2700da4757b32b834a713a534cde3b1478d47a1d8",
+  "finalization_digest": "c9f086b6aa4261f59918f74089041b9a5b7596c46c17d0f3d2b1b0505a19fc48",
+  "previous_campaign_digest": "0000000000000000000000000000000000000000000000000000000000000000",
+  "previous_spent_units": 0,
+  "reservation_digest": "7d4cca728f5e579630336d6c5abba04912c2f40f21b3ae64c2da2aaea72fc930",
+  "v2_epoch": 0,
+  "v2_previous_digest": "0000000000000000000000000000000000000000000000000000000000000000"
+}

@@ -1,0 +1,13 @@
+{
+  "adaptive_geometric_spending_simulated": 0.04886,
+  "attempts": 20,
+  "campaign_alpha": 0.05,
+  "common_cause_bad_null_example": 0.2,
+  "common_cause_note": "20% false-opening counterexample violates the conditional per-attempt alpha premise, so the ledger alone provides no guarantee.",
+  "fixed_spending_simulated": 0.049725,
+  "fixed_spending_theoretical": 0.04883012474683324,
+  "geometric_total_spend": 0.04999995231628418,
+  "naive_simulated": 0.64036,
+  "naive_theoretical": 0.6415140775914583,
+  "trials": 200000
+}
