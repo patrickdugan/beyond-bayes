@@ -5,7 +5,9 @@
   external-commit-before-local-crash, invalid votes, legacy-migration refusal,
   partial publication, and end-to-end witnessed certificate replay.
 - 79 inherited tests from v0.4 are retained.
-- Total before GitHub CI: 93 Python tests passing locally.
+- Total before GitHub CI: 100 Python tests passing locally.
+- 7 additional offline anchor-certificate verifier tests cover valid signatures,
+  key policy pinning, ancestor pinning, duplicated votes, and forged states.
 - One additional Lean 4 module (`AnchorQuorum.lean`) specifies conditional
   honest-quorum and recovery implications; kernel verification pending CI.
 - No deployed BFT cluster or protected-effect execution is claimed.

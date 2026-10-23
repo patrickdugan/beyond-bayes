@@ -42,7 +42,7 @@ theorem common_honest_anchor_rejects_fork
    its externally certified sequence is preserved regardless of what value
    its local disk had prior to recovery. -/
 theorem recovery_uses_certified_sequence
-    (certified local recovered : Nat)
+    (certified diskSeq recovered : Nat)
     (restore : recovered = certified) : recovered = certified := by
   exact restore
 

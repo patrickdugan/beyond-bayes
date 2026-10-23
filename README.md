@@ -23,6 +23,8 @@ reasoning itself is defective or that ACE beats optimal Bayesian procedures.
 - **v0.5:** independently durable Ed25519 anchor replicas, a witnessed-state
   hash chain, quorum certificates, latest-head reads, and rollback recovery
   (`anchor.py`, `anchored_witness.py`).
+- Independent pinned anchor certificate verifier (`verify_anchor.py`) and
+  deterministic signed research fixture (`demo_anchor.py`).
 - Lean 4 source for the abstract inference and quorum implications in
   `lean/ACE/`. Cryptographic and probabilistic assumptions are kept external.
 

@@ -1,7 +1,7 @@
 # ACE v0.5 engineering handoff
 
 The canonical repository is https://github.com/patrickdugan/beyond-bayes.
-Start by running the 93-test Python suite and the four Lean modules in CI.
+Start by running the 100-test Python suite and the four Lean modules in CI.
 
 A working read-only audit exists for a four-replica local anchor quorum. The
 principal remaining architectural gap is networked authenticated replicas,

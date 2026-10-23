@@ -29,6 +29,13 @@ jobs:
             --expected-epoch 0 \
             --expected-previous-digest 0000000000000000000000000000000000000000000000000000000000000000
       - run: python adversarial_benchmark.py --trials-per-truth 50 --output /tmp/ace-smoke
+      - run: python demo_anchor.py --output /tmp/ace-anchor.json
+      - name: Replay pinned synthetic anchor certificate
+        run: |
+          python verify_anchor.py /tmp/ace-anchor.json \
+            --expected-policy bd9629f168a71ef6eec8e64c828bc186dbf6324de3b1f86d26bb8fe2ea1c7c85 \
+            --expected-witness-id notary-0 --expected-sequence 1 \
+            --expected-previous-digest 758e88c8dfddfbd7b1a6ceb453a9de211cabfa1b0f0bfa504e88738801489b03
   lean:
     runs-on: ubuntu-latest
     steps:
