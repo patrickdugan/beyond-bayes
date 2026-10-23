@@ -24,7 +24,7 @@ section Anchoring
 variable {Replica State : Type}
 
 /- An honest anchor signs at most one successor of a specified predecessor.
-   This is a protocol axiom supplied as a local premise, not a cryptographic
+   This is a protocol hypothesis supplied as a local premise, not a cryptographic
    proof about the concrete Python implementation. -/
 theorem common_honest_anchor_rejects_fork
     (Honest : Replica → Prop)
