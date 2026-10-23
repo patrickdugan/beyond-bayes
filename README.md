@@ -1,5 +1,29 @@
 # Beyond Bayes: Adversarial Constraint Epistemics (ACE)
 
+## v0.9: principal-wide error control across child campaigns
+
+The [parent-scope prototype](RESEARCH_V09.md) adds an externally pinned principal/resource
+risk budget that issues nonrefundable quorum-signed grants to child campaigns.
+Every child policy commits to its parent's grant, and a scoped action gate
+checks the live parent history before consuming the child's v2 authorization.
+This addresses campaign-ID resets under a single externally enforced scope.
+
+A valid error guarantee still requires sampling and allocation to be
+precommitted relative to the full parent-scope history. [v0.9 benchmarks](RESULTS_V09.md)
+show the reset attack and preallocation-peeking counterexample. See the
+[engineering handoff](HANDOFF_V09.md) for further security boundaries.
+
+```sh
+python -m unittest discover -q
+python demo_scope.py --output /tmp/ace-scope.json --pins /tmp/ace-scope-pins.json
+python verify_scope.py /tmp/ace-scope.json --pins /tmp/ace-scope-pins.json
+python benchmark_scope.py --trials 100000 --seed 9209 --output results/v09_scope_benchmark.json
+```
+
+This local SQLite quorum protocol is research-only. A trusted scope registry,
+physical measurement-start attestation, remote independent storage, and an
+idempotent external executor are still required for real deployment.
+
 ## v0.6: conditional evidence and dependent-source clusters
 
 **Status: research prototype, 23 October 2026.** The new signed-input inference layer

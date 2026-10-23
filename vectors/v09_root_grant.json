@@ -1,0 +1,66 @@
+{
+  "child_policy": {
+    "campaign_id": "982bf533768bd803cf586e8419c740ccd1ad2124fe61529551c20435c3f89360",
+    "max_faulty": 1,
+    "quorum": 3,
+    "replicas": [
+      {
+        "public_key_hex": "a0d0c14d7aa4624f569a124bba3b6f03e0ceae6108ef69fa41c870f41cd3f34f",
+        "replica_id": "child-0"
+      },
+      {
+        "public_key_hex": "1bbc0f142b4536ef09260d78282e03e3a9152c421e10bcf07bf1840165516708",
+        "replica_id": "child-1"
+      },
+      {
+        "public_key_hex": "e9b520aa3aed380ffce1d5981991b86850e220a823ccaa6c94bf07d373ce7144",
+        "replica_id": "child-2"
+      },
+      {
+        "public_key_hex": "8749bdd6a7f162938e2f1e109e408f3aca3e21c4f2f3d2e10303c71791025562",
+        "replica_id": "child-3"
+      }
+    ],
+    "scale": 1000000000000,
+    "schema": "ACE-campaign-policy-v1",
+    "total_units": 10000000000
+  },
+  "schema": "ACE-root-grant-demo-v1",
+  "scope_history": [
+    {
+      "grant": {
+        "allocated_units": 10000000000,
+        "child_id": "982bf533768bd803cf586e8419c740ccd1ad2124fe61529551c20435c3f89360",
+        "child_nonce": "ACE-v09-first-child-2026",
+        "child_policy": "26ac9c653f5bc5a170f1c9a4175d5890c06d42bdea9681a69f620f1d85f57f81",
+        "child_units": 10000000000,
+        "previous_digest": "0000000000000000000000000000000000000000000000000000000000000000",
+        "schema": "ACE-risk-scope-grant-v1",
+        "scope": "f903083be56d386b77640c357ac4eab45ba0602dd76ceee423600114cf6215a5",
+        "sequence": 1
+      },
+      "votes": [
+        {
+          "grant_digest": "bf7660ba884eb895a7326e810d017ae75042807792569e69c43d8faec340c5e7",
+          "replica_id": "root-0",
+          "signature_hex": "7a3ec3ea31472ccd7513984e8551df51c7f70e5de1a04fb8e5891f438e5ef62ead061f72f553046760ba278cbde0914e5376ec9d4630a3d3545d1b4b8a82ac05"
+        },
+        {
+          "grant_digest": "bf7660ba884eb895a7326e810d017ae75042807792569e69c43d8faec340c5e7",
+          "replica_id": "root-1",
+          "signature_hex": "531a7243712487361fb674e675f3c7f92e31311925c28d9ea1f786ee9ce130a87a6857c18841debc48f2c5ba90b41736757c77339fb490696fc5a7751587ce09"
+        },
+        {
+          "grant_digest": "bf7660ba884eb895a7326e810d017ae75042807792569e69c43d8faec340c5e7",
+          "replica_id": "root-2",
+          "signature_hex": "0091710079e44832c90ad5c556bc1942227e9a37d3773272734a33f22929fe0462183127d2ec2bf417fe3f7ca708dcb94cafb6dd20e1ef9726ac38cbddbcd20c"
+        },
+        {
+          "grant_digest": "bf7660ba884eb895a7326e810d017ae75042807792569e69c43d8faec340c5e7",
+          "replica_id": "root-3",
+          "signature_hex": "36bb262d0a9dba0230071168a846c9a9d9bdee264def1eaab62a7b2145ae44a2730cd19db8df7f1a04d170dba2c13c77133c74ac19be27c37bfd787e15302f0f"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "child_commitment": "26ac9c653f5bc5a170f1c9a4175d5890c06d42bdea9681a69f620f1d85f57f81",
+  "grant_digest": "bf7660ba884eb895a7326e810d017ae75042807792569e69c43d8faec340c5e7",
+  "principal_id": "root-org-A",
+  "resource_id": "high-risk-agent-actions",
+  "scope_commitment": "f903083be56d386b77640c357ac4eab45ba0602dd76ceee423600114cf6215a5",
+  "scope_policy": {
+    "max_faulty": 1,
+    "principal_id": "root-org-A",
+    "quorum": 3,
+    "replicas": [
+      {
+        "public_key_hex": "9ddaff79267a14ba9ec4ccb83d712c544f2201afe5614b4190082e9a736fcb05",
+        "replica_id": "root-0"
+      },
+      {
+        "public_key_hex": "9f8204e87efcfb9006508f0f496dba880b1c69cd7552ce511aadfb1fac3d3793",
+        "replica_id": "root-1"
+      },
+      {
+        "public_key_hex": "ce8340a9eb59716b3dc25ec83d658b17badd7bdc3d3080d29093c15b3ec953ba",
+        "replica_id": "root-2"
+      },
+      {
+        "public_key_hex": "bd63d9396e8e603ef876e7f642de820d433bf91361a2f023ad035e68e2427639",
+        "replica_id": "root-3"
+      }
+    ],
+    "resource_id": "high-risk-agent-actions",
+    "scale": 1000000000000,
+    "schema": "ACE-risk-scope-policy-v1",
+    "scope_id": "root-scope-2026-alpha",
+    "total_units": 50000000000
+  },
+  "trusted_head": "bf7660ba884eb895a7326e810d017ae75042807792569e69c43d8faec340c5e7"
+}
