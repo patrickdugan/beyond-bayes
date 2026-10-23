@@ -79,7 +79,7 @@ safety-critical authorization.
 ## Experiments and next research
 
 Run `python -m unittest test_anchor -v` for the v0.5 adversarial tests,
-including whole-database rollback, one compromised replica, two-replica
+including a direct baseline rollback double-signing counterexample, whole-database rollback, one compromised replica, two-replica
 failure, fake votes, stale parents, partially published transitions, and a
 full end-to-end evidence certificate after a witness database rollback.
 

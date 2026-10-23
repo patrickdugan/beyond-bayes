@@ -12,6 +12,12 @@ honest replica. A vote signs (policy, witness ID, sequence, predecessor,
 signed-snapshot digest). Honest replicas persist their vote before sending it
 and decline a fork at any fixed predecessor.
 
+**Falsifier reproduced:** a standalone signed SQLite journal can be restored
+to a prior valid snapshot. Under this rollback, the same witness will endorse
+two incompatible checkpoint heads for the same epoch. The v0.5 external
+anchor catches the rolled-back local snapshot and restores its last known
+signed view, then rejects the incompatible head.
+
 **Conditional theorem:** if two different successors of the same anchored
 predecessor each obtain q durable votes, their voter sets intersect in at
 least one honest replica, contradicting that replica's single-successor rule.

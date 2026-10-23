@@ -1,11 +1,11 @@
 # v0.5 verification addendum
 
-- 14 new Python tests cover external anchor construction, rolled-back witness
+- 15 new Python tests cover a concrete unanchored rollback equivocation, external anchor construction, rolled-back witness
   recovery, equivocation refusal, one- and two-replica rollback, synthetic
   external-commit-before-local-crash, invalid votes, legacy-migration refusal,
   partial publication, and end-to-end witnessed certificate replay.
 - 79 inherited tests from v0.4 are retained.
-- Total before GitHub CI: 100 Python tests passing locally.
+- Total: 101 Python tests passing locally, including the post-CI baseline rollback counterexample.
 - 7 additional offline anchor-certificate verifier tests cover valid signatures,
   key policy pinning, ancestor pinning, duplicated votes, and forged states.
 - One additional Lean 4 module (`AnchorQuorum.lean`) specifies conditional

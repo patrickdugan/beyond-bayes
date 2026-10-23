@@ -94,6 +94,31 @@ class AnchorProtocolTests(AnchorFixture):
         with self.assertRaisesRegex(WitnessError,'missing witnessed'):
             recovered.endorse(head,[])
 
+    def test_unanchored_durable_witness_has_valid_snapshot_rollback_fork(self):
+        from durable_witness import DurableWitness
+        db=self.root/'unanchored-attack.sqlite'
+        witness=DurableWitness(self.policy,self.p,'notary-0',self.wkeys[0],db)
+        r0,r1=bit_reports(self.p,self.keys,[0,0])
+        witness.receive(r0)
+        with closing(sqlite3.connect(db)) as connection:
+            earlier=connection.execute('SELECT state,signature FROM states').fetchone()
+        first_head=Head(self.policy.commitment,self.p.commitment,0,1,
+                        snapshot_log_root([r0]),GENESIS_DIGEST)
+        first=SignedHead(first_head,self.logkey.sign(
+            _encoding(first_head.canonical())).hex())
+        a=witness.endorse(first,[r0])
+        with closing(sqlite3.connect(db)) as connection,connection:
+            connection.execute('UPDATE states SET state=?,signature=?',earlier)
+        witness=DurableWitness(self.policy,self.p,'notary-0',self.wkeys[0],db)
+        second_head=Head(self.policy.commitment,self.p.commitment,0,2,
+                         snapshot_log_root([r0,r1]),GENESIS_DIGEST)
+        second=SignedHead(second_head,self.logkey.sign(
+            _encoding(second_head.canonical())).hex())
+        b=witness.endorse(second,[r0,r1])
+        self.assertNotEqual(a.head_digest,b.head_digest)
+        self.assertEqual(a.witness_id,b.witness_id)
+        self.assertEqual(first_head.epoch,second_head.epoch)
+
     def test_same_epoch_fork_after_full_local_rollback_rejected(self):
         w=self.witness()
         original=self.original_local()
