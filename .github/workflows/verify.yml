@@ -61,12 +61,18 @@ jobs:
           python verify_campaign.py /tmp/ace-campaign.json --pins /tmp/ace-campaign-pins.json
       - name: Smoke-test campaign-wide alpha spending benchmark
         run: python benchmark_campaign.py --trials 2000 --seed 8208 --output /tmp/ace-campaign-benchmark.json
-      - name: Verify pinned v0.9 risk-scope grant chain
+      - name: Replay pinned synthetic v0.9 root budget grant
         run: |
-          python demo_scope.py --output /tmp/ace-v09-scope.json --pins /tmp/ace-v09-scope-pins.json
-          python verify_scope.py /tmp/ace-v09-scope.json --pins /tmp/ace-v09-scope-pins.json
-      - name: Smoke-test scoped parent budget
-        run: python benchmark_scope.py --trials 2000 --seed 9209 --output /tmp/ace-v09-benchmark.json
+          python demo_scope.py --output /tmp/ace-root.json --pins /tmp/ace-root-pins.json
+          python verify_scope.py /tmp/ace-root.json --pins /tmp/ace-root-pins.json
+      - name: Smoke-test root-scope error accounting
+        run: python benchmark_scope.py --trials 2000 --seed 9209 --output /tmp/ace-root-benchmark.json
+      - name: Replay v0.10 attested instrument start and signed measurements
+        run: |
+          python demo_measurement.py --output /tmp/ace-v10-measurement.json --pins /tmp/ace-v10-pins.json
+          python verify_measurement.py /tmp/ace-v10-measurement.json --pins /tmp/ace-v10-pins.json
+      - name: Measure adversarial prestart peeking and honest sampling
+        run: python benchmark_measurement.py --trials 5000 --seed 1010 --output /tmp/ace-v10-benchmark.json
   lean:
     runs-on: ubuntu-latest
     steps:
