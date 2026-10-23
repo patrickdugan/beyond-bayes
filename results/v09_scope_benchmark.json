@@ -1,0 +1,12 @@
+{
+  "children": 20,
+  "interpretation": "A pinned scope blocks budget resets. The conditional-null guarantee additionally requires allocation before data exposure.",
+  "peek_observed": 0.64435,
+  "peek_theory": 0.6415140775914581,
+  "root_alpha": 0.05,
+  "root_spending_observed": 0.04916,
+  "root_spending_theory": 0.04883012474683324,
+  "trials": 100000,
+  "unscoped_observed": 0.64256,
+  "unscoped_theory": 0.6415140775914581
+}
