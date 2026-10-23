@@ -218,6 +218,23 @@ class BudgetLedgerTests(unittest.TestCase):
         self.assertTrue(verify_certificate(CampaignCertificate(old,tuple(votes)),self.policy))
         self.assertEqual(self.quorum.current().state.spent,1)
 
+    def test_twenty_fresh_denials_share_one_five_percent_budget(self):
+        allocation=2_500_000_000  # 0.25% per experiment, 5% total
+        for i in range(20):
+            r=self.quorum.reserve(challenge=f'fresh-risk-test-{i:03d}-2026',
+                    protocol='0'*64,witness_policy='0'*64,cluster_plan='0'*64,
+                    v2_policy='0'*64,action='0'*64,alpha_units=allocation)
+            self.quorum.finalize(r,v2_certificate={'test_index':i},authorized=False)
+        view=self.quorum.current()
+        self.assertEqual(view.state.spent,self.policy.total_units)
+        self.assertEqual(view.sequence,40)
+        self.assertEqual(len(view.state.seen),20)
+        self.assertEqual(view.state.stage,'denied')
+        with self.assertRaises(CampaignError):
+            self.quorum.reserve(challenge='fresh-risk-test-020-2026',
+                protocol='0'*64,witness_policy='0'*64,cluster_plan='0'*64,
+                v2_policy='0'*64,action='0'*64,alpha_units=1)
+
     def test_corrupt_vote_and_single_successor(self):
         r=self.quorum.reserve(challenge='vote-conflict-challenge',protocol='0'*64,
             witness_policy='0'*64,cluster_plan='0'*64,v2_policy='0'*64,action='0'*64,
