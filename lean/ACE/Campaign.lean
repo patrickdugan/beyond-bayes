@@ -23,29 +23,29 @@ def reserve (ledger : Ledger) (allocation : Nat) : Option Ledger :=
 theorem reserve_is_monotone (ledger next : Ledger) (a : Nat)
     (h : reserve ledger a = some next) :
     ledger.spent ≤ next.spent := by
-  unfold reserve at h
-  split_ifs at h with bound
-  · cases h
+  by_cases bound : 0 < a ∧ ledger.spent + a ≤ ledger.cap
+  · simp only [reserve, if_pos bound, Option.some.injEq] at h
+    cases h
     omega
-  · contradiction
+  · simp [reserve, bound] at h
 
 theorem reserve_preserves_cap (ledger next : Ledger) (a : Nat)
     (h : reserve ledger a = some next) :
     next.spent ≤ ledger.cap := by
-  unfold reserve at h
-  split_ifs at h with bound
-  · cases h
+  by_cases bound : 0 < a ∧ ledger.spent + a ≤ ledger.cap
+  · simp only [reserve, if_pos bound, Option.some.injEq] at h
+    cases h
     exact bound.2
-  · contradiction
+  · simp [reserve, bound] at h
 
 theorem reserve_keeps_total (ledger next : Ledger) (a : Nat)
     (h : reserve ledger a = some next) :
     ledger.cap = next.cap := by
-  unfold reserve at h
-  split_ifs at h with bound
-  · cases h
+  by_cases bound : 0 < a ∧ ledger.spent + a ≤ ledger.cap
+  · simp only [reserve, if_pos bound, Option.some.injEq] at h
+    cases h
     rfl
-  · contradiction
+  · simp [reserve, bound] at h
 
 /-- A denied attempt never returns its allocated budget. -/
 def finalize (ledger : Ledger) (_authorized : Bool) : Ledger := ledger
