@@ -1,11 +1,17 @@
 name: ACE research checks
 on:
+  # Active feature proposals are validated by pull requests.
   push:
+    branches: [main]
   pull_request:
   workflow_dispatch:
 
 permissions:
   contents: read
+
+concurrency:
+  group: ace-research-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
 
 jobs:
   python:
