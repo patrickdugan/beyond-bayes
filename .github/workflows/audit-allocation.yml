@@ -1,0 +1,38 @@
+name: theorem-audit-allocation
+
+on:
+  pull_request:
+    paths:
+      - "audit_allocation.py"
+      - "test_audit_allocation.py"
+      - "RESEARCH_AUDIT_ALLOCATION.md"
+      - "results/theorem_audit_allocation_250.json"
+      - ".github/workflows/audit-allocation.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  isolated-audit-selection:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Exact audit decision and reproducibility tests
+        run: python -m unittest test_audit_allocation -v
+      - name: Replay the paired synthetic benchmark
+        run: |
+          python audit_allocation.py --trials 250 --seed 10227 --budget 5 \
+            --output /tmp/theorem-audit-replay.json > /dev/null
+          python - <<'PYCLI'
+          import json
+          from pathlib import Path
+          expected = json.loads(Path('results/theorem_audit_allocation_250.json').read_text('utf-8'))
+          actual = json.loads(Path('/tmp/theorem-audit-replay.json').read_text('utf-8'))
+          assert actual == expected, 'paired audit-allocation receipt mismatch'
+          print('Matched 250-trial paired theorem-audit allocation receipt')
+          PYCLI
