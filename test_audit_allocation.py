@@ -50,6 +50,14 @@ class TestAuditAllocation(unittest.TestCase):
     def test_seeded_reproducibility(self):
         self.assertEqual(simulate(20, seed=19), simulate(20, seed=19))
 
+    def test_committed_benchmark_receipt(self):
+        import json
+        from pathlib import Path
+        fixture = Path(__file__).resolve().parent / "results/theorem_audit_allocation_250.json"
+        observed = simulate(250, seed=10227, budget=5)
+        expected = json.loads(fixture.read_text(encoding="utf-8"))
+        self.assertEqual(observed, expected)
+
     def test_falsifiers(self):
         with self.assertRaises(ValueError):
             simulate(trials=0)
