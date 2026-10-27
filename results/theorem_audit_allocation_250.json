@@ -1,0 +1,84 @@
+{
+  "budget": 5,
+  "note": "Synthetic likelihoods, paired outcomes, common robust terminal decision; no real-model calibration.",
+  "seed": 10227,
+  "trials_per_world": 250,
+  "worlds": {
+    "nominal": {
+      "adversarial": {
+        "false_confidence_per_trial": 0.076,
+        "loss_per_trial": 0.772,
+        "spent_per_trial": 4.78,
+        "true_defect_flagged_per_trial": 0.336
+      },
+      "bayes_evi": {
+        "false_confidence_per_trial": 0.076,
+        "loss_per_trial": 0.772,
+        "spent_per_trial": 4.78,
+        "true_defect_flagged_per_trial": 0.336
+      },
+      "cheapest": {
+        "false_confidence_per_trial": 0,
+        "loss_per_trial": 1.764,
+        "spent_per_trial": 4,
+        "true_defect_flagged_per_trial": 0.268
+      },
+      "random": {
+        "false_confidence_per_trial": 0.016,
+        "loss_per_trial": 1.252,
+        "spent_per_trial": 4.808,
+        "true_defect_flagged_per_trial": 0.32
+      },
+      "robust_evi": {
+        "false_confidence_per_trial": 0.016,
+        "loss_per_trial": 0.16,
+        "spent_per_trial": 5,
+        "true_defect_flagged_per_trial": 0.396
+      },
+      "uniform": {
+        "false_confidence_per_trial": 0,
+        "loss_per_trial": 1.764,
+        "spent_per_trial": 4,
+        "true_defect_flagged_per_trial": 0.268
+      }
+    },
+    "shifted": {
+      "adversarial": {
+        "false_confidence_per_trial": 0.084,
+        "loss_per_trial": 0.744,
+        "spent_per_trial": 4.712,
+        "true_defect_flagged_per_trial": 0.592
+      },
+      "bayes_evi": {
+        "false_confidence_per_trial": 0.084,
+        "loss_per_trial": 0.744,
+        "spent_per_trial": 4.712,
+        "true_defect_flagged_per_trial": 0.592
+      },
+      "cheapest": {
+        "false_confidence_per_trial": 0,
+        "loss_per_trial": 0.972,
+        "spent_per_trial": 4,
+        "true_defect_flagged_per_trial": 0.368
+      },
+      "random": {
+        "false_confidence_per_trial": 0.024,
+        "loss_per_trial": 0.816,
+        "spent_per_trial": 4.808,
+        "true_defect_flagged_per_trial": 0.476
+      },
+      "robust_evi": {
+        "false_confidence_per_trial": 0.048,
+        "loss_per_trial": 0.436,
+        "spent_per_trial": 5,
+        "true_defect_flagged_per_trial": 0.628
+      },
+      "uniform": {
+        "false_confidence_per_trial": 0,
+        "loss_per_trial": 0.972,
+        "spent_per_trial": 4,
+        "true_defect_flagged_per_trial": 0.368
+      }
+    }
+  }
+}
