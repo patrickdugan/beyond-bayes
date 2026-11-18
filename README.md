@@ -1,5 +1,13 @@
 # Beyond Bayes: Adversarial Constraint Epistemics (ACE)
 
+## External inventory completeness bound (October 27, 2026)
+
+[Adversarial missingness theorem and executable exhaustive test](AUDIT_COMPLETENESS.md):
+given N independently registered expected events, n reviewed events and b adverse
+reviews, the exact identified adverse-rate interval is [b/N, (b+N-n)/N].
+Signed witnesses cannot certify completeness of events never admitted to their
+log. The supplementary diagnostic leaves all ACE authorization gates unchanged.
+
 ## v0.10: immutable root enrollment and signed measurement starts
 
 See [RESEARCH_V10.md](RESEARCH_V10.md), [RESULTS_V10.md](RESULTS_V10.md) and [HANDOFF_V10.md](HANDOFF_V10.md). The new `root_registry.py` admits exactly one active scoped budget per externally pinned principal/resource and permits administrator-approved rollover with signed historical allocations carried forward. `measurement_start.py` binds a witnessed instrument start to the live registry head, parent grant, child reservation and full v2 policy, then signs every sample with a monotone registered instrument counter. `verify_measurement.py` independently replays the full stack and checks that every logged source report has a matching instrument signature and counter.
