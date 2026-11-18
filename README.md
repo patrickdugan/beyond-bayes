@@ -1,5 +1,13 @@
 # Beyond Bayes: Adversarial Constraint Epistemics (ACE)
 
+## November 18, 2026: Evidence amendments and verified-delta memory (BB-CQ-03)
+
+[BB-CQ-03](research/bb_cq03_verified_amendment_memory.md) specializes the original ECA-04 single-issuer twelve-sentinel model to individually addressable report amendments. The exact current Bayesian posterior has 13 possible match-count labels, while the 4,096 distinct report histories are pairwise distinguishable by named revisions. Any self-contained exact updater needs at least 12 bits, and a representation retaining the current posterior label requires up to 10 supplementary bits.
+
+[The exact source-only implementation](amendment_memory.py) checks 98,304 report corrections and derives a sharp **0.012832873470** expected squared posterior-vector imitation floor for a source-blind aggregate-only state under an explicitly defined IID original-data and independently assigned overwrite design. A toy versioned archive can issue the old-to-new delta needed for exact numerical updates, provided an independent full-archive verifier authenticates that delta. Neither the digest nor numeric-only updater provides such authority by itself.
+
+Reproduce with `python -m unittest test_amendment_memory -v` and `python benchmark_amendment_memory.py --check results/bb_cq03_exact_v1.json`. The [Lean arithmetic kernel](lean/ACE/AmendmentMemory.lean) proves the conditional count identities and one-step distinctness; its scope excludes the full bit lower-bound theorem and Bayesian risk identity. This is a finite mathematical engineering result, with no new neural confirmation or ACE action authority.
+
 ## November 18, 2026: Revocable Bayesian memory and ECA-04 (BB-CQ-02)
 
 [BB-CQ-02 research and results](research/bb_cq02_revocable_bayes_eca04.md) extend the finite continuation quotient to exact ECA-04 three-channel Bayesian inference with separately revocable **hypothetical** evidence groups. The [exact module](revocable_bayes.py) proves by finite continuation witnesses that `g` one-report groups require `3**g` revocation states, even though the current exact posterior has far fewer values. A prospective one-report-per-group observe/revoke contract includes an explicit invalid-event sink. [The committed receipt](results/bb_cq02_exact_v1.json) is independently checked against a pair-product BFS oracle.
