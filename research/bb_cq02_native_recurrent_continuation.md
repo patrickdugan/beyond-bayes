@@ -48,6 +48,20 @@ The strong baseline uses **all allowed historical evidence**. A Bayes procedure 
 For confirmatory promotion, require the pilot primary improvement to exceed both 0.02 and the calibrated sham-variation floor, plus approximate closure. A successful source pilot can authorize a *new* sealed registration, rather than an immediate general mechanistic claim. Negative or below-resolution pilot evidence stops the studied compression family. Record per-block effects and all controls even when the proposed projection fails.
 
 ## 4. Theorem and experiment boundaries
+### Local closure criterion for the rank-two neural quotient
+
+Let `q(h)=D h` with full-row-rank `D`, and consider one fixed, input-conditioned differentiable recurrent step `F_e(h)`. On a convex domain of hidden states, exact one-step closure through `q` is equivalent to
+
+```
+D * J_(F_e)(h) * v = 0    for every h and every v in ker(D).
+```
+
+**Proof.** If `q(F_e(h))` depends only on `q(h)`, take any null direction `v` and differentiate the constant composite `q(F_e(h+t v))` along its allowed fiber. Conversely, integrate the assumed vanishing directional derivative along the segment from `h` to `h+v`: the fundamental theorem of calculus gives `D(F_e(h+v)-F_e(h))=0`. Thus `q(F_e(h))` is constant on each nonempty convex fiber, yielding a well-defined reduced map on `q(domain)`.
+
+The quotient must satisfy this for **every admissible next input** `e` to support the whole declared future event language. When the reachable domain is nonconvex, only the forward implication is automatic without a suitable path-connectivity condition. For finite-step approximate tests, bounds on the derivative along the actual patch segment plus Lipschitz control of subsequent reduced dynamics are needed to turn local tangent loss into a multi-step error budget.
+
+BB-CQ-02 measures one native six-event continuation after a physical displacement in `ker(D)`; positive task drift therefore supplies an empirical **fiber-collision witness** at that dose and horizon. It does not measure the Jacobian condition for every state, prove a global impossibility theorem, or assert that this particular orthogonal projection is optimal among all 2D sufficient statistics. The criterion is a standard differentiable factorization condition, applied here to the frozen GRU's readout fibers. It complements BPD's finite-horizon stacked observability result.
+
 
 The finite BB-CQ-01 theorem applies to **total deterministic machines with a declared event alphabet**. The neural GRU is a continuous nonlinear stochastic-input system; the source test measures one fixed horizon and one task. Current-logit preservation for the rank-two projection follows directly from linear algebra; its future effectiveness is a causal empirical question.
 
