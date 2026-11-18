@@ -63,6 +63,24 @@ def pairs(records: tuple[SignedRecord, ...]) -> tuple[tuple[int, int], ...]:
     return tuple((s.known_label, s.report) for s in records)
 
 
+def paired_tv_floor(first: tuple[float, ...], second: tuple[float, ...]) -> float:
+    """Sharp mean-per-history TV error floor for one indistinguishable pair.
+
+    If a continuation compression gives the same state/suffix for two native
+    output distributions p,q, a decoder must emit a common distribution r.
+    The triangle inequality yields mean(TV(p,r),TV(q,r)) >= TV(p,q)/2,
+    achieved for that pair by r=(p+q)/2. This is about native-output
+    imitation; it says nothing about which model output is normatively right.
+    """
+    if len(first) != len(second) or len(first) < 2:
+        raise ValueError("matching nonempty categorical distributions required")
+    a, b = tuple(float(v) for v in first), tuple(float(v) for v in second)
+    if (any(v < 0 or not (v < float("inf")) for v in a + b)
+            or abs(sum(a) - 1.0) > 1e-6 or abs(sum(b) - 1.0) > 1e-6):
+        raise ValueError("probability distributions must be finite, nonnegative, normalized")
+    return sum(abs(x - y) for x, y in zip(a, b)) / 4.0
+
+
 def generate(index: int) -> Pair | None:
     """A fixed public generator chosen during development, never a test holdout.
 
@@ -180,6 +198,9 @@ def run(checkpoint: Path) -> dict:
         "median_root_max_abs_logit_difference": float(max_logits.median()),
         "max_root_max_abs_logit_difference": float(max_logits.max()),
         "mean_root_probability_total_variation": float(tv.mean()),
+        "paired_mean_native_TV_error_floor_posterior_plus_suffix": float(tv.mean()) / 2.0,
+        "paired_mean_native_argmax_disagreement_floor_posterior_plus_suffix":
+            int(changed.sum()) / (2 * len(eligible)),
         "max_root_probability_total_variation": float(tv.max()),
         "mean_prefix_hidden_l2_difference": float(hidden_l2.mean()),
         "max_prefix_hidden_l2_difference": float(hidden_l2.max()),
