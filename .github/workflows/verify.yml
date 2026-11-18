@@ -33,6 +33,8 @@ jobs:
         run: python bb_cq04_exact.py --output /tmp/bb_cq04_exact_preflight.json
       - name: Replay registered BB-CQ-04 source-frozen exact headroom receipt
         run: python bb_cq04_exact.py --check results/bb_cq04_exact_v1.json
+      - name: Replay BB-CQ-05 calibrated posterior recovery and disclosure receipt
+        run: python bb_cq05_exact.py --check results/bb_cq05_exact_v1.json
       - name: Preserve BB-CQ-04 source-frozen local reproduction bundle
         if: github.event_name == 'pull_request' && github.head_ref == 'research/bb-cq04-headroom-20261118'
         uses: actions/upload-artifact@v4
