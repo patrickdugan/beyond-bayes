@@ -1,5 +1,13 @@
 # Beyond Bayes: Adversarial Constraint Epistemics (ACE)
 
+## November 18, 2026: Revocable Bayesian memory and ECA-04 (BB-CQ-02)
+
+[BB-CQ-02 research and results](research/bb_cq02_revocable_bayes_eca04.md) extend the finite continuation quotient to exact ECA-04 three-channel Bayesian inference with separately revocable **hypothetical** evidence groups. The [exact module](revocable_bayes.py) proves by finite continuation witnesses that `g` one-report groups require `3**g` revocation states, even though the current exact posterior has far fewer values. A prospective one-report-per-group observe/revoke contract includes an explicit invalid-event sink. [The committed receipt](results/bb_cq02_exact_v1.json) is independently checked against a pair-product BFS oracle.
+
+A [native frozen-GRU development assay](native_eca04_continuation.py) uses the original ECA-04 16-unit PyTorch checkpoint (caller supplied, hash verified) and 256 public deterministic issuer fixtures. Paired host-simulated reissues correct one matching and one mismatching report within the prefix; this preserves the exact Bayesian posterior and the final six reports while testing learned recurrent output sensitivity. The original source-only local observation found 152 eligible pairs and 3 changes in the model's top-regime classification. This is a development diagnostic, with no new statistical confirmation, physical signer protection or authorization. Original ECA-04 protected heldout seeds were not loaded.
+
+Reproduce the exact part with `python -m unittest test_revocable_bayes test_native_eca04_continuation -v` and `python benchmark_revocable_bayes.py --check results/bb_cq02_exact_v1.json`. The native part requires `gru_state_dict.pt` from the [original registered ECA-04 artifact](https://github.com/MoralityLabAI/Control-Harness/actions/runs/44145067899/artifacts/14355808052).
+
 ## November 18, 2026: Continuation-quotient bridge (BB-CQ-01)
 
 [BB-CQ-01 research and exact finite results](research/continuation_quotient_bridge_v0_1.md) connect the merged [Dot Matrix continuation-state model](research/dot_matrix_continuation_sufficiency_v0_1.md) and [source-group identifiability diagnostic](research/broken_verifier_identifiability.md) to BPD delayed causal observability and EvalMath's audit discipline. The new [diagnostic](continuation_quotient.py) checks whether a compressed state can reproduce every declared future output **and** update its own retained label after interventions. It reports shortest counterexample event sequences and the minimal additional fixed-width tag bits required for an exact online repair in a finite deterministic contract.

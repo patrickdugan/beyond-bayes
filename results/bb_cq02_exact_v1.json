@@ -1,0 +1,83 @@
+{
+  "authorizes_action": false,
+  "eca04_priors": [
+    "9/20",
+    "7/20",
+    "1/5"
+  ],
+  "evidence_class": "exact_finite_development",
+  "first_same_posterior_collision": {
+    "states": [
+      "011",
+      "101"
+    ],
+    "suffix": [
+      "revoke:0"
+    ]
+  },
+  "independent_product_bfs": {
+    "disagreements": 0,
+    "pairwise_comparisons": 2431
+  },
+  "neural_checkpoint_accessed": false,
+  "prospective_observe_revoke": {
+    "2": {
+      "continuation_classes": 17,
+      "current_outputs_including_invalid": 7,
+      "extra_online_bits_given_output": 2,
+      "minimal_total_bits": 5,
+      "states_including_invalid": 17
+    },
+    "3": {
+      "continuation_classes": 65,
+      "current_outputs_including_invalid": 11,
+      "extra_online_bits_given_output": 4,
+      "minimal_total_bits": 7,
+      "states_including_invalid": 65
+    }
+  },
+  "random_scientific_roots_sampled": 0,
+  "schema": "ace-bb-cq02-revocable-bayes-v1",
+  "static_revocation": {
+    "1": {
+      "continuation_classes": 3,
+      "extra_online_bits_given_posterior": 0,
+      "minimal_total_bits": 2,
+      "posterior_only_sufficient": true,
+      "present_posteriors": 3,
+      "states": 3
+    },
+    "2": {
+      "continuation_classes": 9,
+      "extra_online_bits_given_posterior": 1,
+      "minimal_total_bits": 4,
+      "posterior_only_sufficient": false,
+      "present_posteriors": 6,
+      "states": 9
+    },
+    "3": {
+      "continuation_classes": 27,
+      "extra_online_bits_given_posterior": 3,
+      "minimal_total_bits": 5,
+      "posterior_only_sufficient": false,
+      "present_posteriors": 10,
+      "states": 27
+    },
+    "4": {
+      "continuation_classes": 81,
+      "extra_online_bits_given_posterior": 4,
+      "minimal_total_bits": 7,
+      "posterior_only_sufficient": false,
+      "present_posteriors": 15,
+      "states": 81
+    },
+    "5": {
+      "continuation_classes": 243,
+      "extra_online_bits_given_posterior": 5,
+      "minimal_total_bits": 8,
+      "posterior_only_sufficient": false,
+      "present_posteriors": 21,
+      "states": 243
+    }
+  }
+}
