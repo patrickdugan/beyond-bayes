@@ -1,0 +1,199 @@
+{
+  "base_commit": "c91a758fbf9793368648b002b11778013e7cb69f",
+  "corruption_and_erasure_retention": {
+    "admissible_world_transcripts": 2914,
+    "matched_credal_disagreements": 0,
+    "truths_removed": 0,
+    "wrong_identifications": 0
+  },
+  "path_recovery": {
+    "cases": 224,
+    "unresolved": 0,
+    "wrong_identifications": 0
+  },
+  "scenarios": {
+    "anchor_revoked": {
+      "assumptions_hold": true,
+      "authorizes_action": false,
+      "compatible_world_count": 2,
+      "status": "undetermined",
+      "truth": 0,
+      "value": null,
+      "wrong_identification": false
+    },
+    "contradictory_trusted_observations": {
+      "assumptions_hold": false,
+      "authorizes_action": false,
+      "compatible_world_count": 0,
+      "status": "model_conflict",
+      "truth": 0,
+      "value": null,
+      "wrong_identification": false
+    },
+    "edge_disjoint_paths_shared_fault_root": {
+      "assumptions_hold": true,
+      "authorizes_action": false,
+      "compatible_world_count": 2,
+      "status": "undetermined",
+      "truth": 0,
+      "value": null,
+      "wrong_identification": false
+    },
+    "invalid_trusted_anchor_boundary": {
+      "assumptions_hold": false,
+      "authorizes_action": false,
+      "compatible_world_count": 1,
+      "status": "identified",
+      "truth": 0,
+      "value": 1,
+      "wrong_identification": true
+    },
+    "ninety_percent_wrong_cloned_reports": {
+      "assumptions_hold": true,
+      "authorizes_action": false,
+      "compatible_world_count": 1,
+      "status": "identified",
+      "truth": 0,
+      "value": 0,
+      "wrong_identification": false
+    },
+    "parity_without_anchor": {
+      "assumptions_hold": true,
+      "authorizes_action": false,
+      "compatible_world_count": 2,
+      "status": "undetermined",
+      "truth": 0,
+      "value": null,
+      "wrong_identification": false
+    },
+    "two_of_three_reports_missing": {
+      "assumptions_hold": true,
+      "authorizes_action": false,
+      "compatible_world_count": 2,
+      "status": "undetermined",
+      "truth": 0,
+      "value": null,
+      "wrong_identification": false
+    },
+    "unmodelled_common_cause_boundary": {
+      "assumptions_hold": false,
+      "authorizes_action": false,
+      "compatible_world_count": 1,
+      "status": "identified",
+      "truth": 0,
+      "value": 1,
+      "wrong_identification": true
+    }
+  },
+  "schema": "ace-identifiability-exact-benchmark-v1",
+  "scope": "Finite binary constraints with externally supplied fault groups; no model or human evaluation.",
+  "source_group_separation": {
+    "independent_paths": {
+      "authorizes_action": false,
+      "contract_digest": "ad741fde431173218c66ce6ae7b6d390461257a7ebb26e96331a1a03f751e848",
+      "difference_witness": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "history_digest": "cd62eb56cc31210496c795808f6421596befbe341ea6a7407cd03c25ba648242",
+      "minimum_root_distance": 3,
+      "status": "bounded_distance",
+      "synthetic_collision": null,
+      "target": "t",
+      "uniformly_identifiable_under_declared_model": true
+    },
+    "ninety_wrong_clones": {
+      "authorizes_action": false,
+      "contract_digest": "d2648d7e46519330ff3de8f340ba08a5aeb6c40ec63598af0d2854799aec4cb7",
+      "difference_witness": [
+        1
+      ],
+      "history_digest": "7a4852682ba1ec7869a37d16235ac31d04b4835f3b93734d4c9095bf2fc259b3",
+      "minimum_root_distance": 11,
+      "status": "bounded_distance",
+      "synthetic_collision": null,
+      "target": "q",
+      "uniformly_identifiable_under_declared_model": true
+    },
+    "shared_source_paths": {
+      "authorizes_action": false,
+      "contract_digest": "8f293e6549ffb9214a19175fd9e7e30dfa1462590e9cf90411269d4fca42351b",
+      "difference_witness": [
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "history_digest": "f1081365c106908e1242c9390255585e1adf75460a51fc0330300b5ec416c0be",
+      "minimum_root_distance": 1,
+      "status": "bounded_distance",
+      "synthetic_collision": {
+        "label": "constructed counterexample, not observed evidence",
+        "reports": {
+          "anchor": 0,
+          "edge0": 1,
+          "edge1": 1,
+          "edge2": 1,
+          "edge3": 0,
+          "edge4": 0,
+          "edge5": 0
+        },
+        "worlds": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "target": "t",
+      "uniformly_identifiable_under_declared_model": false
+    },
+    "unanchored_parity": {
+      "authorizes_action": false,
+      "contract_digest": "546bd1830b5f00dcac11f54ac7656810d39722e14af43771cd1a7bab767bd7ab",
+      "difference_witness": [
+        1,
+        1
+      ],
+      "history_digest": "aa6f60328ee0300f4d2d5587f9862684efbce3c99ba53d7cd97bda600992e253",
+      "minimum_root_distance": 0,
+      "status": "bounded_distance",
+      "synthetic_collision": {
+        "label": "constructed counterexample, not observed evidence",
+        "reports": {
+          "parity": 0
+        },
+        "worlds": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "target": "q",
+      "uniformly_identifiable_under_declared_model": false
+    }
+  },
+  "source_sha256": {
+    "benchmark_identifiability.py": "d94a109e75f3de557ba6d8a32f2aa8b69540d76688dfc7c33fdc9bf01b6af4e8",
+    "identifiability.py": "35728dd26842d0085194527679d03dc9710822ef9310542824b0b2c0d31cde01"
+  }
+}
