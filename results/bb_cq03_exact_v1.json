@@ -1,0 +1,22 @@
+{
+  "archive_validation": "source-only unit tests, external trust assumed",
+  "authorizes_action": false,
+  "conditional_count6_revised0_risk_squared_l2": "0.009747684361",
+  "conditional_count6_revised1_risk_squared_l2": "0.000116304240",
+  "current_exact_bayes_posterior_labels": 13,
+  "evidence_class": "development_exact_finite_model",
+  "exhaustive_source_aware_revision_updates": 98304,
+  "extra_bits_given_present_posterior_label": 10,
+  "histories": 4096,
+  "largest_present_posterior_fiber": 924,
+  "max_conditional_blind_revision_risk_squared_l2": "0.124070148220",
+  "minimal_self_contained_bits_for_blind_revisions": 12,
+  "model_checkpoint_loaded": false,
+  "n12_same_count_pair_count_combinatorial": 1350030,
+  "n8_independent_same_count_pair_witnesses": 6307,
+  "new_scientific_roots_sampled": 0,
+  "report_revision_contract": "indexed_blind_replace_or_archive_verified_delta",
+  "schema": "ace-bb-cq03-amendment-exact-v1",
+  "sharp_design_weighted_blind_revision_risk_squared_l2": "0.012832873470",
+  "source_model": "original_ECA04_complementary_channel_12_sentinels"
+}
