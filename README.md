@@ -1,5 +1,8 @@
 # Beyond Bayes: Adversarial Constraint Epistemics (ACE)
 
+**EvalMath theorem-audit allocation experiment (27 October 2026):** [research note](RESEARCH_AUDIT_ALLOCATION.md), [six-arm simulator](audit_allocation.py), and [eight tests](test_audit_allocation.py). Synthetic demonstration with matched observation budgets and a shared robust terminal decision rule; this is not an estimate of real-world theorem-audit accuracy.
+
+
 ## v0.10: immutable root enrollment and signed measurement starts
 
 See [RESEARCH_V10.md](RESEARCH_V10.md), [RESULTS_V10.md](RESULTS_V10.md) and [HANDOFF_V10.md](HANDOFF_V10.md). The new `root_registry.py` admits exactly one active scoped budget per externally pinned principal/resource and permits administrator-approved rollover with signed historical allocations carried forward. `measurement_start.py` binds a witnessed instrument start to the live registry head, parent grant, child reservation and full v2 policy, then signs every sample with a monotone registered instrument counter. `verify_measurement.py` independently replays the full stack and checks that every logged source report has a matching instrument signature and counter.
