@@ -25,6 +25,8 @@ jobs:
       - run: python -m unittest discover -v
       - name: Independent exact continuation-quotient receipt replay
         run: python benchmark_continuation_quotient.py --check results/continuation_quotient_v1.json
+      - name: Exact revocable Bayesian posterior and prospective-machine receipt replay
+        run: python benchmark_revocable_bayes.py --check results/bb_cq02_exact_v1.json
       - run: python benchmark_clusters.py --trials-per-truth 100 --output /tmp/ace-clusters-smoke
       - run: python exact_source_benchmark.py --output /tmp/ace-exact
       - run: python quorum_audit.py --output /tmp/ace-quorum.json
