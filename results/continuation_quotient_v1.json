@@ -1,0 +1,88 @@
+{
+  "authorizes_action": false,
+  "delayed_observer": {
+    "additional_online_bits_given_current_readout": 1,
+    "first_collision": {
+      "events": [
+        "tick"
+      ],
+      "states": [
+        "00",
+        "10"
+      ]
+    },
+    "horizon_class_counts": [
+      2,
+      4,
+      4
+    ]
+  },
+  "evidence_class": "development_exact_finite_domain",
+  "independent_bfs": {
+    "disagreements": 0,
+    "machines": 96,
+    "pairwise_equivalence_comparisons": 1618,
+    "repaired_fiber_pairs_checked": 28
+  },
+  "label_updater_counterexample": {
+    "behaviorally_sufficient": true,
+    "incrementally_realizable": false,
+    "online_repair_bits": 1,
+    "output_repair_bits": 0
+  },
+  "revocation": {
+    "2": {
+      "additional_online_bits_given_verdict": 2,
+      "horizon_class_counts": [
+        2,
+        4,
+        4
+      ],
+      "minimal_bits": 2,
+      "states": 4,
+      "verdict_only_sufficient": false
+    },
+    "3": {
+      "additional_online_bits_given_verdict": 3,
+      "horizon_class_counts": [
+        2,
+        5,
+        8,
+        8
+      ],
+      "minimal_bits": 3,
+      "states": 8,
+      "verdict_only_sufficient": false
+    },
+    "4": {
+      "additional_online_bits_given_verdict": 4,
+      "horizon_class_counts": [
+        2,
+        6,
+        12,
+        16,
+        16
+      ],
+      "minimal_bits": 4,
+      "states": 16,
+      "verdict_only_sufficient": false
+    },
+    "5": {
+      "additional_online_bits_given_verdict": 5,
+      "horizon_class_counts": [
+        2,
+        7,
+        17,
+        27,
+        32,
+        32
+      ],
+      "minimal_bits": 5,
+      "states": 32,
+      "verdict_only_sufficient": false
+    }
+  },
+  "schema": "ace-continuation-quotient-exact-v1",
+  "seed": 20261118,
+  "source_sha256": "185c34b937907fa8eb82ec79c671018d489c3b824a629143a18994dbde0cf4e0"
+}
