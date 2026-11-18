@@ -1,5 +1,15 @@
 # Beyond Bayes: Adversarial Constraint Epistemics (ACE)
 
+## November 18, 2026: Calibrated posterior recovery and disclosure timing (BB-CQ-05)
+
+[Protocol](research/bb_cq05_protocol.md) · [Mathematical derivation](research/bb_cq05_mathematics.md) · [Results](research/bb_cq05_results_20261118.md) · [Exact receipt](results/bb_cq05_exact_v1.json).
+
+BB-CQ-05 fixes when a compressed predictor learns which reports were provisional. When the schedule arrives before encoding, a calibrated valid-count state matches full Bayes throughout correction. Under delayed disclosure, answering every legal named correction exactly requires 4,096 encoder states for twelve old bits, even though the initial regime posterior has only thirteen count labels. The largest label fiber needs ten supplementary fixed-width tag bits if that posterior label is stored separately.
+
+Exact rational enumeration measures how disclosing old values repairs the delayed mixed-count posterior. With six replacements, five individual old-value disclosures recover **72.288984%** of the known Brier gap; all six reach the registered 90% target. A verifier holding the archive can instead send the old corrected-slot match total using **three message bits**, enabling exact numeric recovery. Its archive and verification costs remain part of the system. Every posterior is calibrated under its own information; the score gap measures lost information.
+
+The independent raw-history oracle, finite continuation witnesses, and archive checks are covered by eleven new tests. Run `python -m unittest test_posterior_recovery -v` and `python bb_cq05_exact.py --check results/bb_cq05_exact_v1.json`. This is an exact mathematical development result motivated by CQ04's already observed Brier gap. CQ04 retains `HEADROOM_BLOCKED`; recurrent learning and a protected confirmation study require separate experiments.
+
 ## November 18, 2026: Original ECA-04 revision headroom (BB-CQ-04)
 
 [Protocol](research/bb_cq04_protocol.md) · [Registered result](research/bb_cq04_results_20261118.md) · [Exact source-only receipt](results/bb_cq04_exact_v1.json) · [Frozen native GRU development receipt](results/bb_cq04_native_dev_v1.json).
