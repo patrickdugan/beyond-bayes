@@ -30,6 +30,10 @@ The original pilot's source tests and primary scorer completed. An independent a
 
 The first trial has already exposed the development outcome. No additional BB-CQ-02-v1 random cohort will be presented as a replacement first readout. The prospective stop gate is retained. Any new architecture or independent future cohort requires a fresh protocol, untouched roots and a new causal resolution/power preflight.
 
+### Source-only engineering recovery
+
+The corrected replay path passed [Control-Harness CI #44287135545](https://github.com/MoralityLabAI/Control-Harness/actions/runs/44287135545) using the actual frozen original teacher and **four publicly derived development fixture blocks**, covering 864 case-policy scoring rows. The fixture's canonical SHA-256 is `9cbc2b45c529595d4958605b964436460244a2e6b42dd8a85a8b82ae2a3e0773`, and the exact source-factor posterior replay again recorded zero TV error. This validates the updated source-only engineering path; the first 64-block pilot cohort remains unavailable for independent replay.
+
 ## Mathematical consequences for Beyond Bayes
 
 The negative direction is predicted by the distinction between **output equivalence at one time** and **continuation equivalence**. For current classifier difference matrix `D` and recurrent transition `F_e`, exact closure of the quotient `q(h)=D h` requires
