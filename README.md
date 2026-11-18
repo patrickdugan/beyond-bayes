@@ -1,5 +1,15 @@
 # Beyond Bayes: Adversarial Constraint Epistemics (ACE)
 
+## November 18, 2026: Original ECA-04 revision headroom (BB-CQ-04)
+
+[Protocol](research/bb_cq04_protocol.md) · [Registered result](research/bb_cq04_results_20261118.md) · [Exact source-only receipt](results/bb_cq04_exact_v1.json) · [Frozen native GRU development receipt](results/bb_cq04_native_dev_v1.json).
+
+A prospectively specified twelve-sentinel revision fixture retains the original ECA-04 Bayesian channel laws, with independent fair provisional values in 1/3/6 preselected report slots. Exact rational enumeration compares full historical Bayes, externally verified source-aware deltas and the **correct Bayesian posterior given only the aggregate observations**. The primary six-replacement authorization headroom is **0.00620676** cost units per case against a frozen practical minimum of **0.02**, producing the registered `HEADROOM_BLOCKED` verdict. At the same time the exact posterior Brier gap is **0.06446269**, indicating more meaningful calibration than authorization differences for this synthetic task.
+
+A frozen-checkpoint native CPU development run on 256 public deterministic pilot roots finds full GRU replay expected authorization cost **0.196706** versus exact Bayes **0.196611**, while a stale provisional GRU scores **0.263205** with six replacements. This supports the importance of consuming corrected evidence; source-verified online recurrent memory remains untested. The separate public 64-root order-permutation control includes a cost nuisance outlier of **0.1575**, so there is no claimed causal mechanism or 95/95 sham resolution. Historical ECA-04 heldout roots and protected model confirmation samples remain untouched.
+
+Run `python -m unittest test_bb_cq04_core -v` and `python bb_cq04_exact.py --check results/bb_cq04_exact_v1.json`. The optional native runner requires the original SHA-pinned ECA-04 `gru_state_dict.pt` from its [registered archived artifact](https://github.com/MoralityLabAI/Control-Harness/actions/runs/44145067899/artifacts/14355808052); Beyond Bayes CI does not fetch original test rows.
+
 ## November 18, 2026: Evidence amendments and verified-delta memory (BB-CQ-03)
 
 [BB-CQ-03](research/bb_cq03_verified_amendment_memory.md) specializes the original ECA-04 single-issuer twelve-sentinel model to individually addressable report amendments. The exact current Bayesian posterior has 13 possible match-count labels, while the 4,096 distinct report histories are pairwise distinguishable by named revisions. Any self-contained exact updater needs at least 12 bits, and a representation retaining the current posterior label requires up to 10 supplementary bits.
