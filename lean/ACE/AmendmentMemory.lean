@@ -14,22 +14,22 @@ the Bayesian probability model or the exact rational Brier-risk result.
 namespace ACE.AmendmentMemory
 
 /-- The number of matching reports after replacing one attested old bit. -/
-def replaceCount (matches oldMatch newMatch : Nat) : Nat :=
-  matches - oldMatch + newMatch
+def replaceCount (nMatches oldMatch newMatch : Nat) : Nat :=
+  nMatches - oldMatch + newMatch
 
 /-- A valid old contribution can be subtracted before adding its replacement. -/
-theorem replaceCount_balance (matches oldMatch newMatch : Nat)
-    (hOld : oldMatch ≤ matches) :
-    replaceCount matches oldMatch newMatch + oldMatch =
-      matches + newMatch := by
+theorem replaceCount_balance (nMatches oldMatch newMatch : Nat)
+    (hOld : oldMatch ≤ nMatches) :
+    replaceCount nMatches oldMatch newMatch + oldMatch =
+      nMatches + newMatch := by
   unfold replaceCount
   omega
 
 /-- Under the external old-bit premise, a verified delta preserves the count. -/
-theorem verifiedDelta_count (matches oldMatch newMatch target : Nat)
-    (hOld : oldMatch ≤ matches)
-    (hTarget : target = matches - oldMatch + newMatch) :
-    replaceCount matches oldMatch newMatch = target := by
+theorem verifiedDelta_count (nMatches oldMatch newMatch target : Nat)
+    (hOld : oldMatch ≤ nMatches)
+    (hTarget : target = nMatches - oldMatch + newMatch) :
+    replaceCount nMatches oldMatch newMatch = target := by
   simp [replaceCount, hTarget]
 
 /--
@@ -37,21 +37,21 @@ Two histories with an equal positive aggregate match count but opposite old
 status at the selected slot separate after a common absolute replacement
 value. This is the arithmetic witness behind the one-step collision test.
 -/
-theorem oppositeOldMatch_separates (matches newMatch : Nat)
-    (hPositive : 0 < matches) :
-    replaceCount matches 0 newMatch ≠
-      replaceCount matches 1 newMatch := by
+theorem oppositeOldMatch_separates (nMatches newMatch : Nat)
+    (hPositive : 0 < nMatches) :
+    replaceCount nMatches 0 newMatch ≠
+      replaceCount nMatches 1 newMatch := by
   unfold replaceCount
   omega
 
 /-- Replacing a confirmed zero with a confirmed one increases the count. -/
-theorem zeroToOne (matches : Nat) :
-    replaceCount matches 0 1 = matches + 1 := by
+theorem zeroToOne (nMatches : Nat) :
+    replaceCount nMatches 0 1 = nMatches + 1 := by
   simp [replaceCount]
 
 /-- Replacing a confirmed one with zero decreases a positive count. -/
-theorem oneToZero (matches : Nat) (hPositive : 0 < matches) :
-    replaceCount matches 1 0 + 1 = matches := by
+theorem oneToZero (nMatches : Nat) (hPositive : 0 < nMatches) :
+    replaceCount nMatches 1 0 + 1 = nMatches := by
   unfold replaceCount
   omega
 
