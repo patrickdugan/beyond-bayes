@@ -29,6 +29,24 @@ jobs:
         run: python benchmark_revocable_bayes.py --check results/bb_cq02_exact_v1.json
       - name: Exact twelve-sentinel amendment memory and risk receipt replay
         run: python benchmark_amendment_memory.py --check results/bb_cq03_exact_v1.json
+      - name: BB-CQ-04 exact source-only population headroom preflight
+        run: python bb_cq04_exact.py --output /tmp/bb_cq04_exact_preflight.json
+      - name: Preserve BB-CQ-04 source-frozen local reproduction bundle
+        if: github.event_name == 'pull_request' && github.head_ref == 'research/bb-cq04-headroom-20261118'
+        uses: actions/upload-artifact@v4
+        with:
+          name: bb-cq04-source-bundle
+          path: |
+            bb_cq04_core.py
+            bb_cq04_native.py
+            bb_cq04_exact.py
+            test_bb_cq04_core.py
+            revocable_bayes.py
+            amendment_memory.py
+            research/bb_cq04_protocol.md
+            /tmp/bb_cq04_exact_preflight.json
+          if-no-files-found: error
+          retention-days: 30
       - run: python benchmark_clusters.py --trials-per-truth 100 --output /tmp/ace-clusters-smoke
       - run: python exact_source_benchmark.py --output /tmp/ace-exact
       - run: python quorum_audit.py --output /tmp/ace-quorum.json
