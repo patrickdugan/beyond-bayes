@@ -7,7 +7,7 @@ import random
 import unittest
 
 from native_eca04_continuation import (
-    COUNT, DOMAIN, PREFIX, generate, pairs, sign, valid,
+    COUNT, DOMAIN, PREFIX, generate, pairs, sign, valid, paired_tv_floor,
 )
 from revocable_bayes import posterior_full_replay
 
@@ -55,6 +55,22 @@ class NativeECA04ContinuationSourceTests(unittest.TestCase):
         mutated = f.corrected[0]
         self.assertFalse(valid(type(mutated)(mutated.slot, mutated.known_label,
                                              1 - mutated.report, mutated.mac), key))
+
+    def test_sharp_pairwise_native_imitation_floor(self):
+        p, q = (0.9, 0.1), (0.1, 0.9)
+        midpoint = tuple((a + b) / 2 for a, b in zip(p, q))
+        tv = lambda u, v: sum(abs(a - b) for a, b in zip(u, v)) / 2
+        floor = paired_tv_floor(p, q)
+        self.assertAlmostEqual(floor, 0.4)
+        self.assertAlmostEqual(tv(p, midpoint), floor)
+        self.assertAlmostEqual(tv(q, midpoint), floor)
+        for decoder in ((1.0, 0.0), (0.0, 1.0), midpoint, (0.8, 0.2)):
+            self.assertGreaterEqual(
+                (tv(p, decoder) + tv(q, decoder)) / 2 + 1e-12, floor)
+        for bad in (((1.0,), (1.0,)), ((0.2, 0.2), (0.5, 0.5)),
+                    ((0.9, 0.1), (float("nan"), 0.0))):
+            with self.assertRaises(ValueError):
+                paired_tv_floor(*bad)
 
     def test_roster_is_public_deterministic_and_bounded(self):
         rng = random.Random(20261118)
