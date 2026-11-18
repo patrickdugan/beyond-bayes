@@ -278,7 +278,7 @@ def source_only_receipt() -> dict:
     expected = {str(j):exact_population(j) for j in ARMS}
     examples = {}
     for j in ARMS:
-        roots = [make_root("pilot",i) for i in range(8)]
+        roots = [make_root("calibration",i) for i in range(8)]
         proofs = [verified_replacement(root,j) for root in roots]
         examples[str(j)] = {
             "audited_roots":len(proofs),
