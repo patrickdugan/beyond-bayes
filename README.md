@@ -1,5 +1,13 @@
 # Beyond Bayes: Adversarial Constraint Epistemics (ACE)
 
+## November 18, 2026: Continuation-quotient bridge (BB-CQ-01)
+
+[BB-CQ-01 research and exact finite results](research/continuation_quotient_bridge_v0_1.md) connect the merged [Dot Matrix continuation-state model](research/dot_matrix_continuation_sufficiency_v0_1.md) and [source-group identifiability diagnostic](research/broken_verifier_identifiability.md) to BPD delayed causal observability and EvalMath's audit discipline. The new [diagnostic](continuation_quotient.py) checks whether a compressed state can reproduce every declared future output **and** update its own retained label after interventions. It reports shortest counterexample event sequences and the minimal additional fixed-width tag bits required for an exact online repair in a finite deterministic contract.
+
+The [replayable exact receipt](results/continuation_quotient_v1.json) covers 2–5 root revocation fixtures, a delayed-swap observer and 96 deterministic development machines with a separate pair-product BFS oracle. Run `python -m unittest test_continuation_quotient -v` and `python benchmark_continuation_quotient.py --check results/continuation_quotient_v1.json`.
+
+**Evidence status:** finite mathematical derivation and development-only exact checks. No new causal model result or Lean certificate; no extra ACE action authority. The v0.10 conditional e-process/measurement guarantees and matched robust-Bayes equivalence remain unchanged. PR #15 (audit completeness) and PR #16 (theorem-audit allocation) remain separate unmerged research proposals.
+
 ## v0.10: immutable root enrollment and signed measurement starts
 
 See [RESEARCH_V10.md](RESEARCH_V10.md), [RESULTS_V10.md](RESULTS_V10.md) and [HANDOFF_V10.md](HANDOFF_V10.md). The new `root_registry.py` admits exactly one active scoped budget per externally pinned principal/resource and permits administrator-approved rollover with signed historical allocations carried forward. `measurement_start.py` binds a witnessed instrument start to the live registry head, parent grant, child reservation and full v2 policy, then signs every sample with a monotone registered instrument counter. `verify_measurement.py` independently replays the full stack and checks that every logged source report has a matching instrument signature and counter.
