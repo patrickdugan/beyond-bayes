@@ -82,7 +82,23 @@ The first public root SHA-256 is `bd4dfecbe41121d2f7047295da956cbecb3d453c5f2002
 
 **Interpretation:** under this synthetic authenticated-reissue interface, the frozen GRU's output retains distinctions that the ideal complementary-channel Bayesian posterior discards. This establishes a *specific, native-model output counterexample* to treating the exact Bayesian posterior as a continuation-sufficient representation for the GRU's own logits. It does not show that the extra information improves decisions against host truth. Only three eligible pairs changed the top regime classification. The public deterministic fixture is a chosen development diagnostic; its rows do not constitute 152 fresh independent scientific replications or support a causal mechanism claim. The matched corrections themselves intentionally introduce a correlation absent from the original IID data generator.
 
-## 5. Relation to BPD, compactification and ACE
+## 5. A sharp approximate continuation-loss bound
+
+For a fixed future suffix `u`, suppose two earlier histories `h,h'` map to the **same compressed state** `z(h)=z(h')`, but the full frozen native model predicts categorical distributions `p=F(h,u)` and `q=F(h',u)`. Any predictor restricted to this compressed state and the same suffix must return one common distribution `r=g(z,u)`. Since total variation is a metric,
+
+```
+TV(p,q) <= TV(p,r) + TV(r,q),
+
+[TV(p,r) + TV(q,r)] / 2 >= TV(p,q)/2.
+```
+
+**Proposition C (sharp paired approximation floor):** the average total-variation approximation error against these two *native outputs*, with equal history weight, is at least `TV(p,q)/2`. For one pair the midpoint distribution `r=(p+q)/2` attains this lower bound. Additional collisions between different pairs sharing a compressed state can increase the attainable global minimum. The proof applies to arbitrary deterministic compressions and nonlinear decoders. The [source-only test](../test_native_eca04_continuation.py) independently checks the metric bound and midpoint attainment on explicit finite distributions; [native code](../native_eca04_continuation.py) reports the computed floor per original checkpoint.
+
+For the 152 eligible ECA-04 development pairs, mean native output TV was `0.0237130765`. Consequently any decoder restricted to **the exact six-step Bayesian posterior plus their unchanged future suffix** incurs at least **0.0118565382** average TV error across the equally weighted 304 native outputs. The three pairs with differing native argmax labels also force at least **3/304 = 0.0098684211** native-label disagreements for a deterministic posterior-and-suffix-only classifier on that paired population.
+
+These are empirical-certificate lower bounds for **imitating the frozen GRU's own behavior on the specified development fixture**. A smaller or larger Bayesian decision error against the host's actual authorization labels requires independent task scoring. No population uncertainty interval, protected test or mechanism-specific sham advantage follows from this pairing argument.
+
+## 6. Relation to BPD, compactification and ACE
 
 - The exact posterior's memory requirement and the GRU's output-state requirement are **different contracts**. Reconstructing the exact posterior under revocation needs source-group provenance; reconstructing frozen native logits may additionally require the ordered sequence or a certified dynamical quotient.
 - BPD-CQ-01 delayed observability warns that invisible present-state changes may appear at future readouts. The present native prefix/suffix test makes that issue measurable in a frozen recurrent model without claiming a uniquely identified intervention basis.
@@ -90,7 +106,7 @@ The first public root SHA-256 is `bd4dfecbe41121d2f7047295da956cbecb3d453c5f2002
 - ACE v0.10's sequential error bound is conditional on the full actual information filtration and valid enrolled source groups. This module proves no new false-authorization probability bound, source authentication property or action gate safety guarantee.
 - A matched exact-Bayes historical replay is the proper comparator and reproduces the grouped counts exactly under the declared model. A GRU output discrepancy alone should not count as extra epistemic correctness.
 
-## 6. Next experiment and registered stopping conditions
+## 7. Next experiment and registered stopping conditions
 
 A future **BB-CQ-03** may study learned compression under source revision if it first clears a meaningful behavioral effect threshold. The native development sample showed only 3/152 changes in the model's argmax reliability decision, so a study whose endpoint is authorization performance may lack headroom. Require an independent task-headroom screen before spending new protected roots. Freeze the new evaluator, group labels, amendment validity, source/model hashes, outcome, selection process and computational budget **before** any fresh OS-entropy cohort.
 
