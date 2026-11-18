@@ -42,6 +42,7 @@ jobs:
             bb_cq04_exact.py
             test_bb_cq04_core.py
             revocable_bayes.py
+            continuation_quotient.py
             amendment_memory.py
             research/bb_cq04_protocol.md
             /tmp/bb_cq04_exact_preflight.json
